@@ -1,0 +1,16 @@
+{
+  "name": "pankajpandey-ai",
+  "version": "1.0.0",
+  "description": "Pankaj Pandey — AI Native Leader & Builder portfolio",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

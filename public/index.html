@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pankaj Pandey — AI Native Leader & Builder</title>
+<meta name="description" content="20 years of enterprise leadership. Now building the AI-native future. Founder of VedaLogic, fractional AI leader, and product builder.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#07090e;--bg-surface:#0d1117;--bg-elevated:#161b24;
+  --bg-card:#111827;--bg-card-hov:#1a2332;
+  --text-primary:#eef2f8;--text-secondary:#7b8ba0;--text-muted:#3d4f65;
+  --accent:#3b82f6;--accent-dim:rgba(59,130,246,.12);--accent-bright:#60a5fa;
+  --teal:#2dd4bf;--teal-dim:rgba(45,212,191,.08);
+  --border:rgba(255,255,255,.06);--border-hover:rgba(255,255,255,.12);
+  --shadow-sm:0 1px 3px rgba(0,0,0,.4);--shadow-md:0 8px 32px rgba(0,0,0,.5);
+  --font-head:'Manrope',sans-serif;--font-body:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace;
+}
+[data-theme="light"]{
+  --bg:#fbfaf8;--bg-surface:#f3f1ee;--bg-elevated:#fff;
+  --bg-card:#fff;--bg-card-hov:#f7f6f4;
+  --text-primary:#0d1520;--text-secondary:#5a6880;--text-muted:#a8b4c4;
+  --accent:#1d4ed8;--accent-dim:rgba(29,78,216,.08);--accent-bright:#2563eb;
+  --teal:#0d9488;--teal-dim:rgba(13,148,136,.06);
+  --border:rgba(0,0,0,.07);--border-hover:rgba(0,0,0,.13);
+  --shadow-sm:0 1px 4px rgba(0,0,0,.06);--shadow-md:0 8px 32px rgba(0,0,0,.08);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text-primary);font-family:var(--font-body);line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;transition:background .3s,color .3s}
+::selection{background:var(--accent-dim);color:var(--accent-bright)}
+a{color:inherit;text-decoration:none}
+.container{max-width:1280px;margin:0 auto;padding:0 2.5rem}
+.section{padding:8rem 0}
+@media(max-width:768px){.container{padding:0 1.25rem}.section{padding:4.5rem 0}}
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;height:68px;
+  display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;
+  background:rgba(7,9,14,.78);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);transition:background .3s
+}
+[data-theme="light"] .nav{background:rgba(251,250,248,.82)}
+.nav-logo{font-family:var(--font-head);font-weight:800;font-size:1.0625rem;
+  letter-spacing:-.025em;color:var(--text-primary)}
+.nav-logo span{color:var(--accent-bright)}
+[data-theme="light"] .nav-logo span{color:var(--accent)}
+.nav-links{display:flex;align-items:center;gap:2.25rem}
+.nav-links a{font-size:.8125rem;font-weight:500;color:var(--text-secondary);
+  letter-spacing:.01em;transition:color .18s}
+.nav-links a:hover{color:var(--text-primary)}
+.nav-cta{
+  color:var(--accent-bright)!important;background:var(--accent-dim);
+  border:1px solid rgba(59,130,246,.2);padding:.4rem 1.1rem;border-radius:999px;
+  transition:background .18s,border-color .18s!important
+}
+[data-theme="light"] .nav-cta{color:var(--accent)!important;border-color:rgba(29,78,216,.2)}
+.nav-cta:hover{background:rgba(59,130,246,.18)!important}
+.theme-btn{
+  width:34px;height:34px;border-radius:50%;display:flex;align-items:center;
+  justify-content:center;background:var(--bg-elevated);border:1px solid var(--border);
+  cursor:pointer;color:var(--text-secondary);transition:background .2s,color .2s,border-color .2s
+}
+.theme-btn:hover{background:var(--bg-card-hov);color:var(--text-primary);border-color:var(--border-hover)}
+.theme-btn svg{width:15px;height:15px;fill:currentColor;display:block}
+.icon-sun{display:none}[data-theme="light"] .icon-sun{display:block}[data-theme="light"] .icon-moon{display:none}
+.menu-btn{
+  display:none;width:34px;height:34px;border-radius:8px;align-items:center;
+  justify-content:center;background:var(--bg-elevated);border:1px solid var(--border);
+  cursor:pointer;color:var(--text-secondary)
+}
+.menu-btn svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.75;stroke-linecap:round}
+@media(max-width:900px){.nav-links-group{display:none!important}.menu-btn{display:flex}}
+.mobile-nav{
+  display:none;position:fixed;top:68px;left:0;right:0;z-index:99;
+  background:var(--bg-surface);border-bottom:1px solid var(--border);
+  padding:1rem 2.5rem 1.5rem;flex-direction:column;gap:0
+}
+.mobile-nav.open{display:flex}
+.mobile-nav a{padding:.65rem 0;font-size:.9375rem;font-weight:500;color:var(--text-secondary);
+  border-bottom:1px solid var(--border);transition:color .15s}
+.mobile-nav a:last-child{border-bottom:none}
+.mobile-nav a:hover{color:var(--text-primary)}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;
+  padding-top:68px;padding-bottom:6rem;position:relative;overflow:hidden}
+.hero-glow{position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse 65% 55% at 82% 8%,rgba(59,130,246,.05) 0%,transparent 58%),
+             radial-gradient(ellipse 50% 45% at 12% 92%,rgba(45,212,191,.025) 0%,transparent 52%)}
+[data-theme="light"] .hero-glow{
+  background:radial-gradient(ellipse 65% 55% at 82% 8%,rgba(29,78,216,.035) 0%,transparent 58%),
+             radial-gradient(ellipse 50% 45% at 12% 92%,rgba(13,148,136,.02) 0%,transparent 52%)}
+.hero-eyebrow{font-family:var(--font-mono);font-size:.6875rem;font-weight:500;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--accent-bright);margin-bottom:2.25rem;
+  opacity:0;animation:fadeUp .65s ease .1s forwards}
+[data-theme="light"] .hero-eyebrow{color:var(--accent)}
+.hero-headline{font-family:var(--font-head);
+  font-size:clamp(2.75rem,7vw,6.5rem);font-weight:900;line-height:.97;
+  letter-spacing:-.035em;color:var(--text-primary);max-width:13ch;margin-bottom:3rem;
+  opacity:0;animation:fadeUp .7s ease .2s forwards}
+.hero-headline em{font-style:normal;color:var(--accent-bright)}
+[data-theme="light"] .hero-headline em{color:var(--accent)}
+.hero-bottom{display:flex;align-items:flex-end;justify-content:space-between;
+  gap:3rem;opacity:0;animation:fadeUp .7s ease .38s forwards}
+.hero-left{max-width:500px}
+.hero-support{font-size:1.0625rem;font-weight:400;color:var(--text-secondary);
+  line-height:1.75;margin-bottom:1.5rem}
+.hero-support strong{color:var(--text-primary);font-weight:500}
+.hero-identity{font-family:var(--font-mono);font-size:.6875rem;letter-spacing:.06em;
+  color:var(--text-muted);margin-bottom:2.5rem}
+.ctas{display:flex;gap:.875rem;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-size:.875rem;font-weight:600;
+  padding:.75rem 1.75rem;border-radius:999px;transition:transform .15s,box-shadow .2s,background .2s;
+  cursor:pointer;border:none;font-family:var(--font-body)}
+.btn:hover{transform:translateY(-1px)}
+.btn-p{background:linear-gradient(135deg,#1d4ed8,#3b82f6);color:#fff;
+  box-shadow:0 4px 20px rgba(59,130,246,.3)}
+.btn-p:hover{box-shadow:0 6px 30px rgba(59,130,246,.45)}
+[data-theme="light"] .btn-p{background:linear-gradient(135deg,#1e40af,#2563eb);
+  box-shadow:0 4px 20px rgba(29,78,216,.22)}
+.btn-s{background:transparent;color:var(--text-secondary);border:1px solid var(--border-hover)}
+.btn-s:hover{color:var(--text-primary);border-color:var(--text-muted);background:var(--bg-elevated)}
+.stats{display:flex;gap:3rem;flex-shrink:0;align-items:flex-end}
+.stat-num{font-family:var(--font-head);font-size:2.75rem;font-weight:900;
+  line-height:1;letter-spacing:-.035em;color:var(--text-primary);margin-bottom:.3rem}
+.stat-num sub{font-size:1.375rem;color:var(--accent-bright);font-weight:700;vertical-align:bottom}
+[data-theme="light"] .stat-num sub{color:var(--accent)}
+.stat-label{font-family:var(--font-mono);font-size:.5875rem;font-weight:500;
+  letter-spacing:.13em;text-transform:uppercase;color:var(--text-muted)}
+@media(max-width:900px){.hero-bottom{flex-direction:column;align-items:flex-start;gap:2.5rem}.stats{gap:2rem}}
+@media(max-width:480px){.hero-headline{font-size:2.5rem}.stats{flex-wrap:wrap;gap:1.5rem}}
+.sec-label{font-family:var(--font-mono);font-size:.6875rem;font-weight:500;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--accent-bright);margin-bottom:.75rem}
+[data-theme="light"] .sec-label{color:var(--accent)}
+.sec-title{font-family:var(--font-head);font-size:clamp(1.875rem,3.5vw,3rem);
+  font-weight:900;letter-spacing:-.03em;line-height:1.05;color:var(--text-primary);margin-bottom:1rem}
+.sec-desc{font-size:1rem;color:var(--text-secondary);max-width:46ch;line-height:1.72;margin-bottom:3.5rem}
+.moat{background:var(--bg-surface);position:relative;overflow:hidden}
+.moat-glow{position:absolute;top:-200px;right:-200px;width:600px;height:600px;
+  border-radius:50%;background:radial-gradient(circle,var(--teal-dim) 0%,transparent 70%);pointer-events:none}
+.moat-headline{font-family:var(--font-head);
+  font-size:clamp(2rem,4.5vw,3.875rem);font-weight:900;letter-spacing:-.03em;line-height:1.05;
+  color:var(--text-primary);text-align:center;max-width:18ch;margin:0 auto 5rem}
+.moat-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;margin-bottom:5rem;align-items:start}
+@media(max-width:768px){.moat-grid{grid-template-columns:1fr;gap:3rem}}
+.moat-icon{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;
+  justify-content:center;margin-bottom:1.75rem}
+.moat-icon svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.5}
+.moat-icon.blue{background:var(--accent-dim);color:var(--accent-bright)}
+[data-theme="light"] .moat-icon.blue{color:var(--accent)}
+.moat-icon.teal{background:var(--teal-dim);color:var(--teal)}
+.moat-col-title{font-family:var(--font-head);font-size:1.75rem;font-weight:800;
+  letter-spacing:-.02em;color:var(--text-primary);margin-bottom:1.25rem}
+.moat-list{list-style:none;display:flex;flex-direction:column;gap:.75rem}
+.moat-list li{display:flex;align-items:flex-start;gap:.875rem;
+  font-size:1rem;color:var(--text-secondary);line-height:1.55}
+.moat-list li::before{content:'';display:block;flex-shrink:0;width:5px;height:5px;
+  border-radius:50%;background:var(--accent-bright);margin-top:.55rem}
+[data-theme="light"] .moat-list li::before{background:var(--accent)}
+.moat-list.teal li::before{background:var(--teal)}
+.moat-bottom{border-top:1px solid var(--border);padding-top:3.5rem;text-align:center}
+.moat-statement{font-family:var(--font-head);font-size:clamp(1.25rem,2.5vw,1.875rem);
+  font-weight:800;letter-spacing:-.02em;color:var(--text-primary);display:inline-block;position:relative;padding-bottom:.5rem}
+.moat-statement::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--accent),var(--teal));border-radius:2px}
+.work{background:var(--bg)}
+.work-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;
+  background:var(--border);border:1px solid var(--border);border-radius:20px;overflow:hidden}
+.wcard{background:var(--bg-card);padding:2.25rem;transition:background .2s;position:relative}
+.wcard:hover{background:var(--bg-card-hov)}
+.wcard.flagship{grid-column:span 2;padding:2.75rem}
+.wtag{font-family:var(--font-mono);font-size:.625rem;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--accent-bright);
+  margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
+[data-theme="light"] .wtag{color:var(--accent)}
+.wdot{width:6px;height:6px;border-radius:50%;background:var(--teal);
+  animation:pulse 2.2s ease-in-out infinite;flex-shrink:0}
+.wtitle{font-family:var(--font-head);font-size:1.5625rem;font-weight:800;
+  letter-spacing:-.02em;color:var(--text-primary);margin-bottom:.75rem}
+.wcard.flagship .wtitle{font-size:2.125rem}
+.wdesc{font-size:.9375rem;color:var(--text-secondary);line-height:1.72;
+  margin-bottom:1.25rem;font-weight:300}
+.pills{display:flex;flex-wrap:wrap;gap:.375rem}
+.pill{font-family:var(--font-mono);font-size:.5875rem;font-weight:500;letter-spacing:.06em;
+  padding:.25rem .625rem;border-radius:999px;border:1px solid var(--border-hover);color:var(--text-muted)}
+.wlink{display:inline-flex;align-items:center;gap:.375rem;margin-top:1.25rem;
+  font-size:.8125rem;font-weight:600;color:var(--accent-bright);transition:gap .15s}
+[data-theme="light"] .wlink{color:var(--accent)}
+.wlink:hover{gap:.625rem}
+.wlink svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.flagship-inner{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+@media(max-width:768px){.work-grid{grid-template-columns:1fr}.wcard.flagship{grid-column:span 1}
+  .flagship-inner{grid-template-columns:1fr;gap:1.5rem}}
+@media(max-width:480px){.wcard{padding:1.75rem}}
+.eco{background:var(--bg-surface)}
+.eco-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:3.5rem}
+@media(max-width:900px){.eco-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.eco-grid{grid-template-columns:1fr}}
+.eco-card{background:var(--bg-card);border:1px solid var(--border);border-radius:18px;
+  padding:2rem 1.75rem;text-align:center;transition:background .2s,border-color .2s,transform .2s,box-shadow .2s}
+.eco-card:hover{background:var(--bg-card-hov);border-color:var(--border-hover);
+  transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.eco-icon{width:46px;height:46px;border-radius:50%;background:var(--accent-dim);
+  display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem}
+.eco-icon svg{width:20px;height:20px;stroke:var(--accent-bright);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+[data-theme="light"] .eco-icon svg{stroke:var(--accent)}
+.eco-name{font-family:var(--font-head);font-size:1.0625rem;font-weight:800;
+  letter-spacing:-.01em;color:var(--text-primary);margin-bottom:.5rem}
+.eco-sub{font-size:.8125rem;color:var(--text-secondary);line-height:1.55}
+.eco-sub em{font-style:normal;color:var(--text-muted);font-size:.75rem;display:block;margin-top:.25rem}
+.exp{background:var(--bg)}
+.exp-grid{display:grid;grid-template-columns:1fr 2fr;gap:5rem;align-items:start}
+@media(max-width:900px){.exp-grid{grid-template-columns:1fr;gap:3rem}}
+.creds-grid{display:grid;grid-template-columns:1fr 1fr;gap:.625rem;margin-bottom:2rem}
+.cred{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:.875rem 1rem;transition:border-color .2s}
+.cred:hover{border-color:var(--border-hover)}
+.cred-name{font-size:.8125rem;font-weight:600;color:var(--text-primary);margin-bottom:.125rem}
+.cred-sub{font-size:.75rem;color:var(--text-secondary)}
+.nums-card{background:var(--bg-card);border:1px solid rgba(59,130,246,.2);border-radius:14px;padding:1.5rem}
+[data-theme="light"] .nums-card{border-color:rgba(29,78,216,.15)}
+.nums-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.nbig{font-family:var(--font-head);font-size:1.75rem;font-weight:900;
+  color:var(--accent-bright);letter-spacing:-.025em}
+[data-theme="light"] .nbig{color:var(--accent)}
+.nlabel{font-size:.75rem;color:var(--text-secondary);margin-top:.125rem}
+.timeline{display:flex;flex-direction:column}
+.tli{display:flex;gap:1.25rem;padding-bottom:2.5rem}
+.tl-l{display:flex;flex-direction:column;align-items:center;flex-shrink:0}
+.tl-dot{width:10px;height:10px;border-radius:50%;border:2px solid var(--accent-bright);
+  background:var(--bg);margin-top:5px;flex-shrink:0}
+.tl-dot.live{background:var(--teal);border-color:var(--teal)}
+.tl-line{width:1px;flex:1;background:var(--border);margin-top:5px}
+.tli:last-child .tl-line{display:none}
+.tl-badge{display:inline-flex;font-family:var(--font-mono);font-size:.6rem;font-weight:600;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,.25);
+  padding:.2rem .5rem;border-radius:999px;margin-bottom:.5rem}
+[data-theme="light"] .tl-badge{color:var(--teal);border-color:rgba(13,148,136,.3)}
+.tl-co{font-family:var(--font-head);font-size:1.0625rem;font-weight:800;letter-spacing:-.01em;
+  color:var(--text-primary);margin-bottom:.125rem}
+.tl-role{font-size:.875rem;color:var(--text-secondary);margin-bottom:.25rem}
+.tl-date{font-family:var(--font-mono);font-size:.6875rem;color:var(--text-muted);letter-spacing:.04em}
+.tl-detail{margin-top:.65rem;font-size:.8125rem;color:var(--text-muted);line-height:1.62}
+.svc{background:var(--bg-surface)}
+.svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;
+  background:var(--border);border:1px solid var(--border);border-radius:20px;overflow:hidden;margin-top:3.5rem}
+@media(max-width:700px){.svc-grid{grid-template-columns:1fr}}
+.scard{background:var(--bg-card);padding:2.5rem;transition:background .2s}
+.scard:hover{background:var(--bg-card-hov)}
+.snum{font-family:var(--font-mono);font-size:.625rem;letter-spacing:.1em;
+  color:var(--text-muted);margin-bottom:1.5rem}
+.stitle{font-family:var(--font-head);font-size:1.25rem;font-weight:800;
+  letter-spacing:-.02em;color:var(--text-primary);margin-bottom:.875rem}
+.sdesc{font-size:.9375rem;color:var(--text-secondary);line-height:1.72;font-weight:300;margin-bottom:1.25rem}
+.stags{display:flex;flex-wrap:wrap;gap:.375rem}
+.stag{font-size:.6875rem;font-family:var(--font-mono);color:var(--text-muted);
+  background:var(--bg-elevated);border:1px solid var(--border);padding:.2rem .625rem;border-radius:999px}
+.cta{background:var(--bg-surface);position:relative;overflow:hidden;text-align:center}
+.cta-gl{position:absolute;top:-200px;left:-200px;width:500px;height:500px;border-radius:50%;
+  background:radial-gradient(circle,rgba(59,130,246,.06) 0%,transparent 70%);pointer-events:none}
+.cta-gr{position:absolute;bottom:-200px;right:-200px;width:500px;height:500px;border-radius:50%;
+  background:radial-gradient(circle,rgba(45,212,191,.04) 0%,transparent 70%);pointer-events:none}
+.cta-headline{font-family:var(--font-head);font-size:clamp(2.125rem,5vw,4.5rem);
+  font-weight:900;letter-spacing:-.035em;line-height:1.05;color:var(--text-primary);
+  max-width:13ch;margin:0 auto 2rem}
+.cta-sub{font-size:1.0625rem;color:var(--text-secondary);max-width:40ch;
+  margin:0 auto 2.75rem;line-height:1.65}
+.cta-detail{margin-top:2rem;font-family:var(--font-mono);font-size:.6875rem;
+  letter-spacing:.08em;color:var(--text-muted)}
+.cta-detail a{color:var(--text-muted);transition:color .15s}
+.cta-detail a:hover{color:var(--text-secondary)}
+footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 2.5rem;
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-left{font-family:var(--font-mono);font-size:.75rem;color:var(--text-muted)}
+.footer-links{display:flex;gap:1.5rem}
+.footer-links a{font-size:.8125rem;color:var(--text-muted);transition:color .15s}
+.footer-links a:hover{color:var(--text-secondary)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.82)}}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .65s ease,transform .65s ease}
+.reveal.in{opacity:1;transform:translateY(0)}
+.rd1{transition-delay:.08s}.rd2{transition-delay:.16s}.rd3{transition-delay:.24s}.rd4{transition-delay:.32s}
+</style>
+</head>
+<body>
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <a href="#" class="nav-logo" aria-label="Pankaj Pandey">Pankaj<span>.</span>ai</a>
+  <div class="nav-links-group" style="display:flex;align-items:center;gap:2.25rem;">
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#ecosystem">Ecosystem</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact" class="nav-cta">Work With Me</a>
+    </div>
+    <button class="theme-btn" id="tgD" aria-label="Toggle color theme">
+      <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 1.78a1 1 0 011.42 1.42l-.71.7a1 1 0 11-1.41-1.41l.7-.71zm-9.86 0l.7.71a1 1 0 11-1.41 1.41l-.71-.7A1 1 0 014.36 3.78zM10 5a5 5 0 100 10A5 5 0 0010 5zm7 4a1 1 0 110 2h-1a1 1 0 110-2h1zm-13 0a1 1 0 110 2H3a1 1 0 110-2h1zm10.95 5.54l.71.7a1 1 0 01-1.42 1.42l-.7-.71a1 1 0 011.41-1.41zm-9.9 0a1 1 0 011.41 1.41l-.7.71a1 1 0 01-1.42-1.42l.71-.7zM10 17a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1z"/></svg>
+    </button>
+  </div>
+  <div style="display:flex;align-items:center;gap:.75rem;">
+    <button class="theme-btn" id="tgM" aria-label="Toggle color theme" style="display:none;">
+      <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 1.78a1 1 0 011.42 1.42l-.71.7a1 1 0 11-1.41-1.41l.7-.71zm-9.86 0l.7.71a1 1 0 11-1.41 1.41l-.71-.7A1 1 0 014.36 3.78zM10 5a5 5 0 100 10A5 5 0 0010 5zm7 4a1 1 0 110 2h-1a1 1 0 110-2h1zm-13 0a1 1 0 110 2H3a1 1 0 110-2h1zm10.95 5.54l.71.7a1 1 0 01-1.42 1.42l-.7-.71a1 1 0 011.41-1.41zm-9.9 0a1 1 0 011.41 1.41l-.7.71a1 1 0 01-1.42-1.42l.71-.7zM10 17a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1z"/></svg>
+    </button>
+    <button class="menu-btn" id="mBtn" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+<nav class="mobile-nav" id="mNav" aria-label="Mobile navigation">
+  <a href="#about">About</a><a href="#work">Work</a>
+  <a href="#ecosystem">Ecosystem</a><a href="#experience">Experience</a>
+  <a href="#contact">Work With Me</a>
+</nav>
+<main>
+<section class="hero section" id="home">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="container">
+    <p class="hero-eyebrow">AI Native Leader · Builder · Fractional CTO / CPO</p>
+    <h1 class="hero-headline">I build <em>AI-native products</em> — and lead organizations that ship them at scale.</h1>
+    <div class="hero-bottom">
+      <div class="hero-left">
+        <p class="hero-support"><strong>20+ years leading enterprise technology at JPMorgan, Discover, and Northern Trust.</strong> Now building AI-native systems, platforms, and products in the real world — with the velocity of a founder.</p>
+        <p class="hero-identity">Founder · Builder · Fractional AI Leader · Transformation Partner</p>
+        <div class="ctas">
+          <a href="#work" class="btn btn-p">View Work</a>
+          <a href="#contact" class="btn btn-s">Work With Me</a>
+        </div>
+      </div>
+      <div class="stats" aria-label="Key statistics">
+        <div><div class="stat-num">20<sub>+ yrs</sub></div><div class="stat-label">Leadership</div></div>
+        <div><div class="stat-num">$40<sub>M+</sub></div><div class="stat-label">Portfolio</div></div>
+        <div><div class="stat-num">6<sub>+</sub></div><div class="stat-label">AI Products</div></div>
+        <div><div class="stat-num">11</div><div class="stat-label">Active Repos</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="moat section" id="about">
+  <div class="moat-glow" aria-hidden="true"></div>
+  <div class="container">
+    <h2 class="moat-headline reveal">Most leaders don't build. Most builders haven't led at scale.</h2>
+    <div class="moat-grid reveal rd1">
+      <div>
+        <div class="moat-icon blue" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
+        <h3 class="moat-col-title">Enterprise Leadership</h3>
+        <ul class="moat-list">
+          <li>$40M+ portfolio management across JPMorgan, Discover, Northern Trust</li>
+          <li>Org-level AI transformation and CIO-level governance</li>
+          <li>200+ global stakeholders trained and aligned</li>
+          <li>Board-level executive reporting and communication</li>
+          <li>PMP · A-CSM · SEI CMMI L5 certified</li>
+        </ul>
+      </div>
+      <div>
+        <div class="moat-icon teal" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+        <h3 class="moat-col-title">Product Builder</h3>
+        <ul class="moat-list teal">
+          <li>6 AI-native products shipped to production in 60 days</li>
+          <li>Multi-agent systems with Claude, GPT-4, and MCP protocol</li>
+          <li>Full-stack: React, TypeScript, Node.js, PostgreSQL</li>
+          <li>11 active GitHub repos — building is the operating mode</li>
+          <li>Voice AI, bot orchestration, autonomous agent pipelines</li>
+        </ul>
+      </div>
+    </div>
+    <div class="moat-bottom reveal rd2"><span class="moat-statement">I operate at the intersection.</span></div>
+  </div>
+</section>
+<section class="work section" id="work">
+  <div class="container">
+    <p class="sec-label reveal">Build Portfolio</p>
+    <h2 class="sec-title reveal rd1">Strategic Works.</h2>
+    <p class="sec-desc reveal rd2">Six AI-native products built and deployed since February 2026. All production. All TypeScript. All real.</p>
+    <div class="work-grid reveal rd1">
+      <article class="wcard flagship">
+        <div class="flagship-inner">
+          <div>
+            <div class="wtag"><span class="wdot" aria-hidden="true"></span>Flagship Product</div>
+            <h3 class="wtitle">VedaSurf</h3>
+            <p class="wdesc">An AI-native personal life operating system. Voice-first conversational surface connecting school communities, dining, local services, and daily coordination through ambient intelligence. Designed for MCP-based extensibility.</p>
+            <div class="pills"><span class="pill">React</span><span class="pill">TypeScript</span><span class="pill">Node.js</span><span class="pill">Claude API</span><span class="pill">MCP</span><span class="pill">Voice AI</span><span class="pill">PostgreSQL</span></div>
+          </div>
+          <div>
+            <div style="background:var(--bg-elevated);border:1px solid var(--border);border-radius:14px;padding:1.5rem;">
+              <div style="font-family:var(--font-mono);font-size:.625rem;color:var(--text-muted);letter-spacing:.08em;margin-bottom:1rem;text-transform:uppercase;">System Architecture</div>
+              <div style="display:flex;flex-direction:column;gap:.5rem;">
+                <div style="padding:.625rem .875rem;background:var(--accent-dim);border-radius:8px;font-size:.8125rem;color:var(--accent-bright);font-weight:500;">Voice Interface Layer</div>
+                <div style="padding:.625rem .875rem;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;font-size:.8125rem;color:var(--text-secondary);">Multi-Domain Orchestration</div>
+                <div style="padding:.625rem .875rem;background:var(--teal-dim);border-radius:8px;font-size:.8125rem;color:var(--teal);font-weight:500;">MCP Extension Protocol</div>
+                <div style="padding:.625rem .875rem;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;font-size:.8125rem;color:var(--text-secondary);">Claude API · PostgreSQL</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="wcard">
+        <div class="wtag"><span class="wdot" aria-hidden="true"></span>Platform</div>
+        <h3 class="wtitle">AI SmartApp Factory</h3>
+        <p class="wdesc">Multi-agent product development platform — GPT as Product Owner, Claude as Architect, Claude Code as Builder. 9-step ceremony pipeline, Playwright E2E testing, automated build/deploy workflows.</p>
+        <div class="pills"><span class="pill">Multi-agent</span><span class="pill">Claude API</span><span class="pill">GPT-4</span><span class="pill">Playwright</span><span class="pill">CI/CD</span></div>
+        <a href="https://team-room-blueprint.replit.app" target="_blank" rel="noopener" class="wlink">View Live <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </article>
+      <article class="wcard">
+        <div class="wtag">Education · AI</div>
+        <h3 class="wtitle">DanceRise</h3>
+        <p class="wdesc">AI-powered dance education platform leveraging generative AI for personalized curriculum design. Deployed on Vercel. R1 iteration actively in development.</p>
+        <div class="pills"><span class="pill">TypeScript</span><span class="pill">Generative AI</span><span class="pill">Vercel</span></div>
+        <a href="https://dance-rise.vercel.app" target="_blank" rel="noopener" class="wlink">View Live <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </article>
+      <article class="wcard">
+        <div class="wtag">Career · AI</div>
+        <h3 class="wtitle">JobSurf</h3>
+        <p class="wdesc">AI-assisted job search and opportunity matching platform. Full-stack TypeScript, actively in development. Part of the Surf product family.</p>
+        <div class="pills"><span class="pill">TypeScript</span><span class="pill">Node.js</span><span class="pill">AI-native</span></div>
+      </article>
+      <article class="wcard">
+        <div class="wtag"><span class="wdot" aria-hidden="true"></span>Infrastructure · Newest</div>
+        <h3 class="wtitle">VedaBots Manager</h3>
+        <p class="wdesc">Bot orchestration and management platform. Controls, monitors, and coordinates automated agents across the VedaLogic ecosystem. Launched April 2026.</p>
+        <div class="pills"><span class="pill">JavaScript</span><span class="pill">Bot Orchestration</span><span class="pill">Agents</span></div>
+      </article>
+      <article class="wcard">
+        <div class="wtag">Studio · Consulting</div>
+        <h3 class="wtitle">VedaLogic</h3>
+        <p class="wdesc">The product studio and consulting practice behind it all. Where AI-native products are designed, built, and deployed — and where enterprise clients engage for transformation advisory.</p>
+        <div class="pills"><span class="pill">TypeScript</span><span class="pill">Vercel</span><span class="pill">Studio</span></div>
+        <a href="https://vedalogic-vert.vercel.app" target="_blank" rel="noopener" class="wlink">View Studio <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="eco section" id="ecosystem">
+  <div class="container">
+    <div style="max-width:580px;margin:0 auto;text-align:center;" class="reveal">
+      <p class="sec-label" style="justify-content:center;display:flex;">The Veda Ecosystem</p>
+      <h2 class="sec-title" style="font-size:clamp(1.875rem,3.5vw,2.75rem);margin-bottom:.875rem;">This isn't a set of projects. It's a connected AI-native system.</h2>
+      <p style="font-size:1rem;color:var(--text-secondary);line-height:1.7;font-style:italic;">Spanning personal AI systems, autonomous automation, product consulting, and intelligent leadership infrastructure.</p>
+    </div>
+    <div class="eco-grid">
+      <div class="eco-card reveal"><div class="eco-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div><div class="eco-name">VedaSurf</div><div class="eco-sub">Personal Systems &amp; Life OS<em>voice-first ambient intelligence</em></div></div>
+      <div class="eco-card reveal rd1"><div class="eco-icon"><svg viewBox="0 0 24 24"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 0 2h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1 0-2h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2z"/></svg></div><div class="eco-name">VedaBots</div><div class="eco-sub">Automation Layer<em>bot orchestration &amp; agents</em></div></div>
+      <div class="eco-card reveal rd2"><div class="eco-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div class="eco-name">VedaLogic</div><div class="eco-sub">Studio &amp; Consulting<em>AI products designed &amp; deployed</em></div></div>
+      <div class="eco-card reveal rd3"><div class="eco-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div class="eco-name">VedaWorks</div><div class="eco-sub">Leadership Layer<em>fractional AI leadership programs</em></div></div>
+    </div>
+  </div>
+</section>
+<section class="exp section" id="experience">
+  <div class="container">
+    <p class="sec-label reveal">Enterprise Track</p>
+    <h2 class="sec-title reveal rd1">Where I earned the right to say this.</h2>
+    <p class="sec-desc reveal rd2">20+ years governing technology transformation at scale — in institutions where failure is not an option.</p>
+    <div class="exp-grid">
+      <div class="reveal">
+        <div class="creds-grid">
+          <div class="cred"><div class="cred-name">PMP</div><div class="cred-sub">Project Management Professional</div></div>
+          <div class="cred"><div class="cred-name">A-CSM</div><div class="cred-sub">Advanced Certified ScrumMaster</div></div>
+          <div class="cred"><div class="cred-name">CMMI L5</div><div class="cred-sub">SEI Process Framework</div></div>
+          <div class="cred"><div class="cred-name">B.E.</div><div class="cred-sub">Electrical &amp; CS · NIT Rourkela</div></div>
+        </div>
+        <div class="nums-card">
+          <div class="sec-label" style="margin-bottom:1rem;">By the Numbers</div>
+          <div class="nums-grid">
+            <div><div class="nbig">$40M+</div><div class="nlabel">Portfolio managed</div></div>
+            <div><div class="nbig">200+</div><div class="nlabel">Stakeholders trained</div></div>
+            <div><div class="nbig">40+</div><div class="nlabel">Global resources led</div></div>
+            <div><div class="nbig">$7M+</div><div class="nlabel">JPMC tech portfolio</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="timeline reveal rd1">
+        <div class="tli"><div class="tl-l"><div class="tl-dot live"></div><div class="tl-line"></div></div><div><div class="tl-badge">Now · Founder</div><div class="tl-co">VedaLogic</div><div class="tl-role">AI Product Builder &amp; Technology Strategist</div><div class="tl-date">Feb 2026 – Present · Naperville, IL</div><div class="tl-detail">Shipped 6 AI products in 60 days. Architected multi-agent delivery systems using model tiering and MCP-based extensibility.</div></div></div>
+        <div class="tli"><div class="tl-l"><div class="tl-dot"></div><div class="tl-line"></div></div><div><div class="tl-co">Discover Financial Services</div><div class="tl-role">Manager, Agile Program Managers &amp; Scrum Masters · Portfolio Lead</div><div class="tl-date">Jun 2019 – May 2022 · Chicago, IL</div><div class="tl-detail">Built CIO-level dashboards for real-time program health visibility. Led cloud modernization governance.</div></div></div>
+        <div class="tli"><div class="tl-l"><div class="tl-dot"></div><div class="tl-line"></div></div><div><div class="tl-co">Citibank</div><div class="tl-role">Agile Project Manager · Portfolio &amp; Delivery Lead</div><div class="tl-date">Aug 2018 – May 2019 · Elk Grove Village, IL</div><div class="tl-detail">Led portfolio intake for global retail banking technology. Transitioned global teams from waterfall to Lean Agile.</div></div></div>
+        <div class="tli"><div class="tl-l"><div class="tl-dot"></div><div class="tl-line"></div></div><div><div class="tl-co">Northern Trust</div><div class="tl-role">Senior Program Manager · Portfolio Delivery Lead</div><div class="tl-date">Jun 2017 – Jun 2018 · Chicago, IL</div><div class="tl-detail">Directed multi-million-dollar trading platform modernization spanning 40+ global resources.</div></div></div>
+        <div class="tli"><div class="tl-l"><div class="tl-dot"></div><div class="tl-line"></div></div><div><div class="tl-co">JPMorgan Chase</div><div class="tl-role">Senior Technology Portfolio &amp; Program Manager (AVP)</div><div class="tl-date">Jun 2011 – Feb 2016 · Chicago, IL</div><div class="tl-detail">Managed $7M+ Treasury technology portfolio. Delivered Agile transformation training to 200+ global stakeholders.</div></div></div>
+        <div class="tli"><div class="tl-l"><div class="tl-dot"></div></div><div><div class="tl-co">Earlier Career</div><div class="tl-role">Allstate · CNA Insurance · State Farm · CCMSI · IDES</div><div class="tl-date">Pre-2011</div><div class="tl-detail">Progressive program and portfolio leadership across application modernization and enterprise technology delivery.</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="svc section">
+  <div class="container">
+    <p class="sec-label reveal">Work With Me</p>
+    <h2 class="sec-title reveal rd1">How we can work together.</h2>
+    <p class="sec-desc reveal rd2">Senior AI leadership on your terms. I embed, execute, and build systems that outlast the engagement.</p>
+    <div class="svc-grid reveal rd1">
+      <div class="scard"><div class="snum">01 / FRACTIONAL</div><h3 class="stitle">Fractional AI Leader</h3><p class="sdesc">Embed as your senior AI executive — setting strategy, governing delivery, and driving transformation. Ideal for mid-market companies scaling their AI function without full-time CTO/CPO overhead.</p><div class="stags"><span class="stag">Strategy</span><span class="stag">Governance</span><span class="stag">Team enablement</span><span class="stag">Board-level comms</span></div></div>
+      <div class="scard"><div class="snum">02 / BUILD</div><h3 class="stitle">AI Product Architecture &amp; Build</h3><p class="sdesc">Design and ship multi-agent AI products using modern full-stack. Architect with Claude, GPT, and MCP-based systems, then build in React/TypeScript/Node.js — napkin to deployed product.</p><div class="stags"><span class="stag">Multi-agent</span><span class="stag">Full-stack</span><span class="stag">MCP</span><span class="stag">Production deploy</span></div></div>
+      <div class="scard"><div class="snum">03 / ENTERPRISE</div><h3 class="stitle">AI Transformation Program</h3><p class="sdesc">Structure and lead enterprise AI transformation — intake frameworks, delivery governance, CIO-level dashboards, and change management programs from $40M+ portfolio management experience.</p><div class="stags"><span class="stag">Portfolio governance</span><span class="stag">Stakeholder mgmt</span><span class="stag">Change management</span><span class="stag">Exec reporting</span></div></div>
+      <div class="scard"><div class="snum">04 / ADVISORY</div><h3 class="stitle">AI Readiness Assessment</h3><p class="sdesc">A structured diagnostic of your AI readiness across people, process, data, and tooling. Delivered as a prioritized roadmap with quick-win plans and a clear investment thesis for leadership.</p><div class="stags"><span class="stag">Diagnostic</span><span class="stag">Roadmap</span><span class="stag">Quick wins</span><span class="stag">Investment framing</span></div></div>
+    </div>
+  </div>
+</section>
+<section class="cta section" id="contact">
+  <div class="cta-gl" aria-hidden="true"></div>
+  <div class="cta-gr" aria-hidden="true"></div>
+  <div class="container" style="position:relative;z-index:1;">
+    <h2 class="cta-headline reveal">Building what's next in AI, product, and intelligent systems.</h2>
+    <p class="cta-sub reveal rd1">Whether you need a fractional leader, a product architect, or a transformation partner — let's talk. Chicago-based, open to hybrid and remote engagements worldwide.</p>
+    <div class="ctas reveal rd2" style="justify-content:center;">
+      <a href="mailto:pankajp1@gmail.com" class="btn btn-p">Let's Talk</a>
+      <a href="#work" class="btn btn-s">View Work</a>
+    </div>
+    <p class="cta-detail reveal rd3"><a href="mailto:pankajp1@gmail.com">pankajp1@gmail.com</a> &nbsp;·&nbsp; Naperville, IL &nbsp;·&nbsp; <a href="tel:3122829270">312.282.9270</a></p>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="footer-left">© 2026 Pankaj Pandey · pankajpandey.ai</div>
+  <div class="footer-links">
+    <a href="https://github.com/pandeydumka" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://www.linkedin.com/in/ppandey-ai-nativeleader" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="mailto:pankajp1@gmail.com">Email</a>
+  </div>
+</footer>
+<script>
+(function(){
+  var K='pp-theme',root=document.documentElement;
+  function get(){return localStorage.getItem(K)||'dark'}
+  function apply(t){root.setAttribute('data-theme',t);localStorage.setItem(K,t)}
+  function toggle(){apply(root.getAttribute('data-theme')==='dark'?'light':'dark')}
+  apply(get());
+  document.getElementById('tgD').addEventListener('click',toggle);
+  document.getElementById('tgM').addEventListener('click',toggle);
+  var btn=document.getElementById('mBtn'),nav=document.getElementById('mNav'),open=false;
+  function close(){open=false;nav.classList.remove('open');btn.setAttribute('aria-expanded','false')}
+  btn.addEventListener('click',function(){open=!open;nav.classList.toggle('open',open);btn.setAttribute('aria-expanded',String(open))});
+  document.querySelectorAll('#mNav a, a[href^="#"]').forEach(function(a){a.addEventListener('click',close)});
+  var tgM=document.getElementById('tgM');
+  function checkM(){tgM.style.display=window.innerWidth<=900?'flex':'none'}
+  checkM();window.addEventListener('resize',checkM);
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target)}})
+  },{threshold:.08,rootMargin:'0px 0px -30px 0px'});
+  els.forEach(function(e){obs.observe(e)});
+})();
+</script>
+</body>
+</html>
