@@ -2,22 +2,24 @@ const express = require('express');
 const path = require('path');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
-const HOST = '0.0.0.0';
+const PORT = parseInt(process.env.PORT) || 3000;
+
+console.log('Starting server, PORT env:', process.env.PORT);
+console.log('Listening on port:', PORT);
 
 // Serve static files from public directory
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Health check endpoint for Railway
+// Health check
 app.get('/health', (req, res) => {
-  res.status(200).json({ status: 'ok', service: 'pankajpandey-ai' });
+  res.status(200).json({ status: 'ok' });
 });
 
-// Catch-all: serve index.html for any unmatched route
+// Serve index.html for all routes
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-app.listen(PORT, HOST, () => {
-  console.log(`pankajpandey.ai running on http://${HOST}:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server live at http://0.0.0.0:${PORT}`);
 });
