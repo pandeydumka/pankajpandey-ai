@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Pankaj Pandey — Resume | AI Strategy Leader & Technology Executive</title>
+<meta name="description" content="Pankaj Pandey — Senior technology executive with 20+ years of enterprise leadership at JPMorgan, Discover, Northern Trust, and CNA. 7 production AI products shipped in 2026."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#0A1628;--navy-mid:#1E3A5F;--blue:#2563EB;--blue-light:#EFF6FF;--slate:#475569;--slate-light:#64748B;--surface:#F8FAFC;--border:#E2E8F0;--white:#FFFFFF}
+html,body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;font-size:14px;line-height:1.5;color:#0F172A;background:#F1F5F9;-webkit-font-smoothing:antialiased}
+.controls-bar{position:sticky;top:0;z-index:100;background:var(--navy);color:#fff;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;box-shadow:0 4px 12px rgba(0,0,0,.15)}
+.controls-bar-title{font-size:.85rem;font-weight:600}
+.controls-bar-actions{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:9px 18px;border-radius:9999px;font-size:.82rem;font-weight:600;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
+.btn-primary{background:var(--blue);color:#fff}
+.btn-primary:hover{background:#1d4ed8;transform:translateY(-1px)}
+.btn-ghost{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.2)}
+.btn-ghost:hover{background:rgba(255,255,255,.2)}
+.btn svg{width:14px;height:14px}
+.page{max-width:8.5in;margin:24px auto;background:white;padding:0.55in 0.65in;box-shadow:0 4px 20px rgba(0,0,0,.08);border-radius:4px}
+.header{border-bottom:3px solid var(--navy);padding-bottom:14px;margin-bottom:18px}
+.name{font-size:2.4rem;font-weight:900;color:var(--navy);letter-spacing:-.02em;line-height:1;margin-bottom:6px}
+.title{font-size:1.05rem;font-weight:600;color:var(--blue);letter-spacing:.01em;margin-bottom:10px}
+.contact{font-size:.78rem;color:var(--slate);display:flex;flex-wrap:wrap;gap:4px 14px}
+.contact a{color:var(--slate);text-decoration:none}
+.contact a:hover{color:var(--blue);text-decoration:underline}
+.contact span{display:inline-flex;align-items:center;gap:4px;white-space:nowrap}
+.section{margin-bottom:18px}
+.section-title{font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:8px;padding-bottom:3px;border-bottom:1px solid var(--border)}
+.summary{font-size:.88rem;line-height:1.6;color:#1E293B}
+.summary strong{color:var(--navy);font-weight:700}
+.competencies{display:grid;grid-template-columns:repeat(3,1fr);gap:4px 16px;font-size:.82rem}
+.competency{padding:3px 0;color:#1E293B;font-weight:500;display:flex;align-items:center;gap:6px}
+.competency::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--blue);flex-shrink:0}
+.competency.featured{font-weight:700;color:var(--navy)}
+.job{margin-bottom:14px;page-break-inside:avoid;break-inside:avoid}
+.job:last-child{margin-bottom:0}
+.job-header{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:2px;flex-wrap:wrap}
+.job-company{font-size:1rem;font-weight:800;color:var(--navy)}
+.job-location{font-size:.78rem;color:var(--slate-light);font-style:italic;font-weight:400}
+.job-date{font-size:.78rem;color:var(--slate);font-weight:600;white-space:nowrap}
+.job-title{font-size:.88rem;font-weight:600;color:var(--blue);margin-bottom:6px}
+.job-intro{font-size:.82rem;color:#1E293B;line-height:1.55;margin-bottom:6px}
+.bullets{list-style:none;padding:0}
+.bullets li{font-size:.82rem;line-height:1.55;color:#1E293B;padding-left:14px;position:relative;margin-bottom:3px}
+.bullets li::before{content:'▸';position:absolute;left:0;color:var(--blue);font-weight:700}
+.bullets li strong{color:var(--navy);font-weight:700}
+.bullets li.product-bullet{margin-bottom:5px}
+.products-intro{font-size:.82rem;font-weight:700;color:var(--navy);margin-top:8px;margin-bottom:5px}
+.tech-grid{display:grid;gap:6px}
+.tech-row{font-size:.82rem;line-height:1.55}
+.tech-label{font-weight:700;color:var(--navy);display:inline-block;min-width:130px}
+.certs{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.82rem}
+.cert{display:inline-flex;align-items:center;gap:5px;color:#1E293B}
+.cert strong{color:var(--navy);font-weight:700}
+.education{font-size:.88rem;line-height:1.5}
+.edu-degree{font-weight:700;color:var(--navy);margin-bottom:2px}
+.edu-school{color:#1E293B}
+.screen-footer{max-width:8.5in;margin:0 auto 40px;text-align:center;font-size:.78rem;color:var(--slate);padding:0 24px;line-height:1.6}
+@media print{
+  @page{size:letter;margin:0.45in 0.55in}
+  html,body{background:white;font-size:10pt}
+  .controls-bar,.screen-footer{display:none !important}
+  .page{max-width:none;margin:0;padding:0;box-shadow:none;border-radius:0;background:white}
+  .name{font-size:24pt}
+  .title{font-size:11pt}
+  .contact{font-size:8.5pt;gap:3px 10px}
+  .section-title{font-size:8.5pt}
+  .summary{font-size:9.5pt;line-height:1.5}
+  .competencies{font-size:9pt}
+  .job-company{font-size:11pt}
+  .job-title{font-size:9.5pt}
+  .job-date,.job-location{font-size:8.5pt}
+  .job-intro,.bullets li{font-size:9pt;line-height:1.45}
+  .products-intro{font-size:9pt}
+  .tech-row{font-size:9pt}
+  .certs{font-size:9pt}
+  .education{font-size:9.5pt}
+  .section{margin-bottom:10pt}
+  .job{margin-bottom:8pt}
+  a{color:var(--navy);text-decoration:none}
+}
+@media (max-width:600px){
+  .page{padding:24px 20px}
+  .name{font-size:1.7rem}
+  .title{font-size:.95rem}
+  .competencies{grid-template-columns:1fr 1fr}
+  .controls-bar{flex-direction:column;align-items:stretch;gap:8px}
+  .controls-bar-actions{justify-content:center}
+}
+</style>
+</head>
+<body>
+<div class="controls-bar">
+  <div class="controls-bar-title">📄 Pankaj Pandey — Resume</div>
+  <div class="controls-bar-actions">
+    <a href="/mockup.html" class="btn btn-ghost">← Back to Portfolio</a>
+    <button class="btn btn-primary" onclick="window.print()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8" rx="1"/></svg>
+      Save as PDF
+    </button>
+  </div>
+</div>
+<div class="page">
+  <header class="header">
+    <h1 class="name">Pankaj Pandey</h1>
+    <div class="title">AI Strategy Leader &amp; Technology Executive</div>
+    <div class="contact">
+      <span>📧 <a href="mailto:pankajp1@gmail.com">pankajp1@gmail.com</a></span>
+      <span>📱 312.282.9270</span>
+      <span>📍 Naperville / Chicago, IL</span>
+      <span>🔗 <a href="https://www.linkedin.com/in/ppandey-ai-nativeleader" target="_blank">linkedin.com/in/ppandey-ai-nativeleader</a></span>
+      <span>💻 <a href="https://github.com/pandeydumka" target="_blank">github.com/pandeydumka</a></span>
+    </div>
+  </header>
+  <section class="section">
+    <h2 class="section-title">Professional Summary</h2>
+    <p class="summary">Senior technology executive with <strong>20+ years of enterprise leadership</strong> across financial services, insurance, and AI-native product building. Proven track record governing complex transformations and <strong>multi-million-dollar technology portfolios</strong> at JPMorgan Chase, CNA Insurance, Discover Financial Services, and Northern Trust. Now uniquely positioned at the intersection of enterprise leadership and hands-on AI product building — having shipped <strong>7 production AI-native products</strong> in 2026 spanning clinical decision support, multi-agent platforms, multi-tenant SaaS, and AI automation consulting. PMP and SAFe certified, with deep expertise in program governance, agile transformation, product strategy, and responsible AI adoption.</p>
+  </section>
+  <section class="section">
+    <h2 class="section-title">Core Competencies</h2>
+    <div class="competencies">
+      <div class="competency featured">AI Strategy &amp; Adoption</div>
+      <div class="competency featured">Enterprise Transformation</div>
+      <div class="competency featured">Full-Stack AI Product Building</div>
+      <div class="competency">Program &amp; Portfolio Management</div>
+      <div class="competency">Agile Delivery Leadership</div>
+      <div class="competency">Product Strategy &amp; Roadmap</div>
+      <div class="competency">Multi-Agent AI Systems</div>
+      <div class="competency">Responsible AI &amp; Safety Guardrails</div>
+      <div class="competency">MCP Protocol Architecture</div>
+      <div class="competency">Governance &amp; Risk Alignment</div>
+      <div class="competency">Executive &amp; C-Suite Reporting</div>
+      <div class="competency">Cross-Functional Leadership</div>
+      <div class="competency">Cloud &amp; Infrastructure</div>
+      <div class="competency">Change Management</div>
+      <div class="competency">Stakeholder Management</div>
+    </div>
+  </section>
+  <section class="section">
+    <h2 class="section-title">Professional Experience</h2>
+    <div class="job">
+      <div class="job-header"><div class="job-company">VedaLogic <span class="job-location">— Naperville, IL</span></div><div class="job-date">Feb 2026 – Present</div></div>
+      <div class="job-title">Founder &amp; AI Product Builder · Technology Strategist</div>
+      <p class="job-intro">Founded VedaLogic as an AI automation consulting practice and product studio. Built and shipped 7 production AI-native products in under 4 months, demonstrating end-to-end mastery from architecture through deployment.</p>
+      <div class="products-intro">Key Achievements — AI Products Shipped:</div>
+      <ul class="bullets">
+        <li class="product-bullet"><strong>🚀 AI SmartApp Factory</strong> — Architected and launched a multi-agent AI software development platform with GPT as Product Owner, Claude as Architect, Claude Code as Builder. Implemented a 9-step ceremony pipeline with Playwright E2E test gates, intent-driven development, automated build &amp; deployment, and soft-delete safety. <em>Stack: TypeScript · PostgreSQL · Drizzle ORM · Multi-agent orchestration.</em></li>
+        <li class="product-bullet"><strong>🏥 NeoAssist</strong> — Designed and built a clinical decision support system for neonatal resuscitation with real-time state machine, checklist engine, and "Aria" AI suggestion layer governed by strict human-review safety guards — never auto-administers, never auto-escalates. Production deployment with offline queue and birth-anchored reminders.</li>
+        <li class="product-bullet"><strong>🩰 DanceRise</strong> — Shipped an all-in-one SaaS platform for competitive dance studios. Dancer management, AI dance coach, progress analytics, competition planning across 24+ companies, career portal, Stripe billing, push notifications. <em>Stack: React 18 · TypeScript · Express · PostgreSQL · OpenAI.</em></li>
+        <li class="product-bullet"><strong>🤖 VedaBots Manager</strong> — Built a multi-tenant AI SMS bot platform powered by Claude Haiku and Twilio. Plug-and-play for local businesses — first paying customer (VIM Dance Studio) onboarded with after-hours lead capture automation.</li>
+        <li class="product-bullet"><strong>💼 JobSurf</strong> — Founded and shipped an AI-assisted job execution platform with URL parsing, AI fit scoring, resume tailoring, and pipeline tracking. Dogfooded daily as both founder and primary user.</li>
+        <li class="product-bullet"><strong>🎨 VIM Dance Studio</strong> — Delivered a premium client website paired with VedaBots Manager SMS bot — full website + AI deployment for a real local business.</li>
+        <li class="product-bullet"><strong>🏢 VedaLogic Consulting Practice</strong> — Established AI automation consulting for operations-heavy businesses (landscaping, home services, professional services), with practical AI systems reducing manual work and scaling lead response without adding headcount.</li>
+      </ul>
+      <div class="products-intro">Technical Foundation:</div>
+      <ul class="bullets">
+        <li>Architected MCP (Model Context Protocol) based extensibility across product suite</li>
+        <li>Implemented model-tiering strategy (Claude Haiku for cost-efficient flows, Sonnet/Opus for complex reasoning)</li>
+        <li>Built in public — 11 active GitHub repositories</li>
+        <li>Established Definition of Done and three-lane execution model for solo-founder velocity</li>
+      </ul>
+    </div>
+    <div class="job">
+      <div class="job-header"><div class="job-company">Discover Financial Services <span class="job-location">— Chicago, IL</span></div><div class="job-date">Jun 2019 – May 2022</div></div>
+      <div class="job-title">Manager, Program Management</div>
+      <p class="job-intro">Led program management discipline across cloud modernization and digital banking transformation initiatives. Owned portfolio governance for 40+ engineering teams.</p>
+      <ul class="bullets">
+        <li>Built CIO-level dashboards providing real-time program health visibility, risk indicators, and dependency mapping across the technology portfolio</li>
+        <li>Led cloud modernization governance, partnering with engineering, security, and compliance to enable safe migration to AWS / cloud-native architectures</li>
+        <li>Coached and managed a team of Agile Program Managers and Scrum Masters, scaling agile practices and delivery maturity across the organization</li>
+        <li>Drove process improvements that reduced cycle time and improved delivery predictability for senior leadership</li>
+      </ul>
+    </div>
+    <div class="job">
+      <div class="job-header"><div class="job-company">CitiBank <span class="job-location">— Elk Grove Village, IL</span></div><div class="job-date">Aug 2018 – May 2019</div></div>
+      <div class="job-title">Agile Project Manager · Portfolio &amp; Delivery Lead</div>
+      <ul class="bullets">
+        <li>Led portfolio intake and prioritization for global retail banking technology programs</li>
+        <li>Drove the transition of global delivery teams from waterfall to Lean Agile methodologies</li>
+        <li>Managed offshore / onshore coordination and stakeholder alignment across multiple time zones</li>
+      </ul>
+    </div>
+    <div class="job">
+      <div class="job-header"><div class="job-company">Northern Trust <span class="job-location">— Chicago, IL</span></div><div class="job-date">Jun 2017 – Jun 2018</div></div>
+      <div class="job-title">Senior Scrum Master · Agile Project Manager</div>
+      <ul class="bullets">
+        <li>Directed Agile delivery for trading platform modernization initiatives supporting global equity and derivatives systems</li>
+        <li>Managed delivery for multi-million-dollar platform modernization programs involving <strong>40+ global technology and business resources</strong></li>
+        <li>Coordinated migration of legacy applications to cloud-based Java platforms</li>
+        <li>Implemented CI/CD pipelines, automated testing, and Agile engineering practices to improve deployment reliability</li>
+      </ul>
+    </div>
+    <div class="job">
+      <div class="job-header"><div class="job-company">CNA Insurance <span class="job-location">— Chicago, IL</span></div><div class="job-date">May 2016 – May 2017</div></div>
+      <div class="job-title">Scrum Master</div>
+      <ul class="bullets">
+        <li>Supported Agile adoption across enterprise technology initiatives within a <strong>$40M technology portfolio</strong></li>
+        <li>Coached cross-functional Agile teams across onshore and offshore delivery models</li>
+        <li>Coordinated release planning and execution for enterprise database upgrades impacting <strong>200+ applications</strong></li>
+      </ul>
+    </div>
+    <div class="job">
+      <div class="job-header"><div class="job-company">JPMorgan Chase <span class="job-location">— Chicago, IL</span></div><div class="job-date">Jun 2011 – Feb 2016</div></div>
+      <div class="job-title">Senior Technology Project Manager (AVP) · Scrum Master</div>
+      <ul class="bullets">
+        <li>Led Agile delivery and project management for enterprise Treasury technology platforms</li>
+        <li>Managed a <strong>$7M+ portfolio</strong> of application development and infrastructure initiatives</li>
+        <li>Built governance frameworks, delivery plans, and executive reporting dashboards for large-scale programs</li>
+        <li>Delivered Agile training and transformation workshops for global technology and business stakeholders</li>
+      </ul>
+    </div>
+    <div class="job">
+      <div class="job-header"><div class="job-company">Allstate · State Farm · CCMSI · IDES <span class="job-location">— Chicago Area</span></div><div class="job-date">Pre-2011</div></div>
+      <div class="job-title">Progressive Program &amp; Portfolio Leadership Roles</div>
+      <p class="job-intro">Progressive program and portfolio leadership across application modernization, ERP delivery (SAP, PeopleSoft), and enterprise technology transformation. Foundation of two decades in regulated industries — financial services, insurance, and public sector.</p>
+    </div>
+  </section>
+  <section class="section">
+    <h2 class="section-title">Technical Expertise</h2>
+    <div class="tech-grid">
+      <div class="tech-row"><span class="tech-label">AI &amp; Modern Stack:</span> Anthropic Claude (Opus / Sonnet / Haiku) · OpenAI GPT-4 · MCP Protocol · Multi-Agent Orchestration · LangChain · Prompt Engineering · Responsible AI Frameworks</div>
+      <div class="tech-row"><span class="tech-label">Development:</span> React · TypeScript · Node.js · Express · Vite · Tailwind · Drizzle ORM</div>
+      <div class="tech-row"><span class="tech-label">Data &amp; Infrastructure:</span> PostgreSQL · Neon · Cloudflare R2 · Railway · Replit · GitHub Actions · REST APIs</div>
+      <div class="tech-row"><span class="tech-label">Delivery &amp; Methodology:</span> PMP · SAFe · Certified Scrum Master (CSM) · Advanced Certified Scrum Master (A-CSM) · Kanban · Lean</div>
+      <div class="tech-row"><span class="tech-label">Tools:</span> JIRA · Confluence · Azure DevOps · ServiceNow · Tableau · Microsoft Project · Smartsheet</div>
+    </div>
+  </section>
+  <section class="section">
+    <h2 class="section-title">Certifications</h2>
+    <div class="certs">
+      <div class="cert"><strong>PMP</strong> — Project Management Professional (PMI)</div>
+      <div class="cert"><strong>SAFe Agilist</strong> — Scaled Agile Framework</div>
+      <div class="cert"><strong>CSM / A-CSM</strong> — Certified ScrumMaster / Advanced Certified ScrumMaster</div>
+    </div>
+  </section>
+  <section class="section">
+    <h2 class="section-title">Education</h2>
+    <div class="education">
+      <div class="edu-degree">Bachelor of Engineering, Electrical Engineering</div>
+      <div class="edu-school">National Institute of Technology (NIT) Rourkela · Orissa, India · 1998</div>
+    </div>
+  </section>
+</div>
+<div class="screen-footer">
+  <strong>To save as PDF:</strong> Click the "Save as PDF" button above, or press <kbd>Cmd/Ctrl + P</kbd> and choose "Save as PDF" as the destination.<br/>
+  This page is also shareable — recruiters can view it directly at this URL.
+</div>
+</body>
+</html>
