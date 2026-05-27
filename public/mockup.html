@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Pankaj Pandey — UI Mockup v2.1</title>
+<title>Pankaj Pandey — UI Mockup v2.2</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
@@ -54,12 +54,9 @@ nav a:hover{color:var(--navy);background:var(--surface)}
 .stat-label{font-size:.78rem;color:var(--slate);margin-top:3px;font-weight:500}
 .hero-photo-col{display:flex;justify-content:center;align-items:center}
 .hero-photo-wrap{position:relative;width:340px;height:380px}
-.hero-photo-bg{position:absolute;inset:0;border-radius:24px;background:linear-gradient(135deg,var(--blue-light) 0%,#DBEAFE 100%)}
-.hero-photo-frame{position:absolute;inset:0;border-radius:24px;overflow:hidden;border:6px solid #fff;box-shadow:var(--shadow-lg)}
-.hero-photo-frame img{width:100%;height:100%;object-fit:cover}
-.hero-photo-placeholder{position:absolute;inset:0;border-radius:24px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;border:2px dashed var(--blue-mid);background:linear-gradient(135deg,var(--blue-light) 0%,#DBEAFE 100%)}
-.hero-photo-placeholder .avatar-circle{width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,var(--navy) 0%,var(--blue) 100%);display:flex;align-items:center;justify-content:center;font-size:2.5rem;font-weight:800;color:#fff}
-.hero-photo-placeholder p{font-size:.8rem;color:var(--slate);font-weight:500;text-align:center;padding:0 16px}
+.hero-photo-bg{position:absolute;inset:0;border-radius:24px;background:linear-gradient(135deg,var(--blue-light) 0%,#DBEAFE 100%);transform:translate(12px,12px);z-index:0}
+.hero-photo-frame{position:absolute;inset:0;border-radius:24px;overflow:hidden;border:6px solid #fff;box-shadow:var(--shadow-lg);background:#F1F5F9;z-index:1}
+.hero-photo-frame img{width:100%;height:100%;object-fit:cover;display:block}
 .hero-badge{position:absolute;bottom:-16px;right:-16px;background:var(--white);border:1px solid var(--border);border-radius:var(--radius-md);padding:12px 16px;box-shadow:var(--shadow-md);display:flex;align-items:center;gap:10px;z-index:5}
 .hero-badge-dot{width:8px;height:8px;border-radius:50%;background:#10B981;flex-shrink:0;animation:pulse 2s infinite}
 .hero-badge-text{font-size:.78rem;font-weight:600;color:var(--navy)}
@@ -184,7 +181,7 @@ footer{background:var(--navy);padding:36px 0;display:flex;align-items:center}
 </style>
 </head>
 <body>
-<div class="mockup-notice">🎨 UI Mockup v2.1 — Real Products + Live Links<span>Upload photo to replace placeholder</span></div>
+<div class="mockup-notice">🎨 UI Mockup v2.2 — With Photo + 7 Live AI Products<span>Recruiter-First Personal Brand Site</span></div>
 <header>
   <div class="container"><div class="header-inner">
     <div class="logo">Pankaj<span>.ai</span></div>
@@ -213,10 +210,9 @@ footer{background:var(--navy);padding:36px 0;display:flex;align-items:center}
     </div>
   </div>
   <div class="hero-photo-col"><div class="hero-photo-wrap">
-    <!-- PHOTO SLOT: replace .hero-photo-placeholder div with <div class="hero-photo-frame"><img src="pankaj.jpg" alt="Pankaj Pandey"/></div> -->
-    <div class="hero-photo-placeholder">
-      <div class="avatar-circle">PP</div>
-      <p>Photo placeholder<br/>Upload your headshot to replace this</p>
+    <div class="hero-photo-bg"></div>
+    <div class="hero-photo-frame">
+      <img src="/Profile%20Picture.png" alt="Pankaj Pandey — AI Strategy Leader & Technology Executive"/>
     </div>
     <div class="hero-chips"><div class="mini-chip">🏦 JPMorgan Chase</div><div class="mini-chip">💳 Discover Financial</div><div class="mini-chip">🏛 Northern Trust</div></div>
     <div class="hero-badge"><div class="hero-badge-dot"></div><div><div class="hero-badge-text">Open to Opportunities</div><div class="hero-badge-sub">Chicago, IL · Hybrid / Remote</div></div></div>
@@ -301,7 +297,6 @@ footer{background:var(--navy);padding:36px 0;display:flex;align-items:center}
 <section id="projects"><div class="container">
   <div class="section-header"><div class="section-label">AI Builder Portfolio</div><div class="section-title">Live AI Products</div><div class="section-sub">7 production AI-native products spanning clinical decision support, multi-tenant SaaS, multi-agent platforms, and consulting practice. All deployed and accessible.</div></div>
   <div class="projects-grid">
-
     <div class="project-card flagship">
       <div class="project-eyebrow">⭐ Flagship · Multi-Agent Platform</div>
       <div class="project-title">AI SmartApp Factory</div>
@@ -310,7 +305,6 @@ footer{background:var(--navy);padding:36px 0;display:flex;align-items:center}
       <div class="project-features"><span>Workspace Mgmt</span><span>Intent-Driven Dev</span><span>9-Step Ceremony Pipeline</span><span>Auto Build &amp; Deploy</span><span>Soft-Delete Safety</span></div>
       <a href="https://aismartappfactory-production.up.railway.app" target="_blank" class="project-link">View Live →</a>
     </div>
-
     <div class="project-card clinical">
       <div class="project-eyebrow">🏥 Clinical AI · Healthcare</div>
       <div class="project-title">NeoAssist</div>
@@ -319,7 +313,6 @@ footer{background:var(--navy);padding:36px 0;display:flex;align-items:center}
       <div class="project-features"><span>Safety-First AI</span><span>Offline Queue</span><span>Birth-Anchored Reminders</span></div>
       <a href="https://neoassist-production.up.railway.app" target="_blank" class="project-link">View Live →</a>
     </div>
-
     <div class="project-card">
       <div class="project-eyebrow">🩰 SaaS · Education</div>
       <div class="project-title">DanceRise</div>
@@ -328,7 +321,6 @@ footer{background:var(--navy);padding:36px 0;display:flex;align-items:center}
       <div class="project-features"><span>AI Coach</span><span>Multi-Tenant</span><span>Stripe Billing</span><span>Push Notifications</span></div>
       <a href="https://dancerisedemo.up.railway.app" target="_blank" class="project-link">View Live →</a>
     </div>
-
     <div class="project-card">
       <div class="project-eyebrow">🤖 Multi-Tenant Platform</div>
       <div class="project-title">VedaBots Manager</div>
@@ -337,7 +329,6 @@ footer{background:var(--navy);padding:36px 0;display:flex;align-items:center}
       <div class="project-features"><span>Multi-Tenant</span><span>SMS Webhooks</span><span>Lead Capture</span><span>VIM = First Customer</span></div>
       <a href="https://vedabots-manager-production.up.railway.app" target="_blank" class="project-link">View Live →</a>
     </div>
-
     <div class="project-card">
       <div class="project-eyebrow">💼 AI Career Platform</div>
       <div class="project-title">JobSurf</div>
@@ -346,7 +337,6 @@ footer{background:var(--navy);padding:36px 0;display:flex;align-items:center}
       <div class="project-features"><span>URL Parser</span><span>AI Fit Scoring</span><span>Resume Tailoring</span></div>
       <a href="https://jobsurf-production.up.railway.app" target="_blank" class="project-link">View Live →</a>
     </div>
-
     <div class="project-card">
       <div class="project-eyebrow">🎨 Client Project</div>
       <div class="project-title">VIM Dance Studio</div>
@@ -355,7 +345,6 @@ footer{background:var(--navy);padding:36px 0;display:flex;align-items:center}
       <div class="project-features"><span>Premium Design</span><span>VedaBots Integrated</span></div>
       <a href="https://vim-production.up.railway.app" target="_blank" class="project-link">View Live →</a>
     </div>
-
     <div class="project-card">
       <div class="project-eyebrow">🏢 Studio &amp; Consulting</div>
       <div class="project-title">VedaLogic</div>
@@ -364,7 +353,6 @@ footer{background:var(--navy);padding:36px 0;display:flex;align-items:center}
       <div class="project-features"><span>AI Strategy</span><span>Workflow Automation</span><span>Lead Response</span></div>
       <a href="https://vedalogic.ai" target="_blank" class="project-link">View Site →</a>
     </div>
-
   </div>
 </div></section>
 <section class="resume-cta-section" id="resume"><div class="container">
