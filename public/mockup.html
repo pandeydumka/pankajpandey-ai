@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Pankaj Pandey — UI Mockup v2.5</title>
+<title>Pankaj Pandey — AI Strategy Leader &amp; Technology Executive</title>
+<meta name="description" content="Pankaj Pandey — Senior technology executive with 20+ years of enterprise leadership at JPMorgan, Discover, Northern Trust. AI strategy, transformation, and product building. Open to leadership opportunities."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
@@ -17,13 +18,11 @@ img{display:block;max-width:100%}
 .container{width:100%;max-width:var(--max-w);margin-inline:auto;padding-inline:24px}
 .section-label{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:14px}
 .section-title{font-size:2rem;font-weight:800;color:var(--navy);line-height:1.2;margin-bottom:12px}
-.section-sub{font-size:1.05rem;color:var(--slate);max-width:580px;line-height:1.65}
+.section-sub{font-size:1.05rem;color:var(--slate);max-width:640px;line-height:1.65}
 .section-header{margin-bottom:48px}
 section{padding:96px 0}
-section:nth-child(even){background:var(--surface)}
-.mockup-notice{background:linear-gradient(90deg,#1E3A5F,#2563EB);color:#fff;text-align:center;padding:10px 24px;font-size:.82rem;font-weight:600;letter-spacing:.02em;position:sticky;top:0;z-index:9999}
-.mockup-notice span{opacity:.75;font-weight:400;margin-left:8px}
-header{position:sticky;top:38px;z-index:900;background:rgba(255,255,255,.88);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--border);height:var(--header-h)}
+section.alt-bg{background:var(--surface)}
+header{position:sticky;top:0;z-index:900;background:rgba(255,255,255,.88);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--border);height:var(--header-h)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;height:100%;gap:32px}
 .logo{font-size:1.1rem;font-weight:800;color:var(--navy);letter-spacing:-.02em;white-space:nowrap}
 .logo span{color:var(--blue)}
@@ -46,10 +45,10 @@ nav a:hover{color:var(--navy);background:var(--surface)}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
 .hero h1{font-size:3.2rem;font-weight:900;color:var(--navy);line-height:1.1;letter-spacing:-.03em;margin-bottom:20px}
 .hero h1 em{font-style:normal;color:var(--blue)}
-.hero-sub{font-size:1.1rem;color:var(--slate);line-height:1.7;margin-bottom:36px;max-width:520px}
-.hero-sub strong{color:var(--navy)}
+.hero-sub{font-size:1.08rem;color:var(--slate);line-height:1.7;margin-bottom:36px;max-width:560px}
+.hero-sub strong{color:var(--navy);font-weight:600}
 .hero-ctas{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:52px}
-.hero-stats{display:flex;gap:32px;padding-top:32px;border-top:1px solid var(--border)}
+.hero-stats{display:flex;gap:32px;padding-top:32px;border-top:1px solid var(--border);flex-wrap:wrap}
 .stat-num{font-size:1.6rem;font-weight:800;color:var(--navy);line-height:1}
 .stat-label{font-size:.78rem;color:var(--slate);margin-top:3px;font-weight:500}
 .hero-photo-col{display:flex;justify-content:center;align-items:center}
@@ -63,7 +62,7 @@ nav a:hover{color:var(--navy);background:var(--surface)}
 .hero-badge-sub{font-size:.68rem;color:var(--slate);margin-top:2px}
 .hero-chips{position:absolute;top:calc(100% + 18px);left:50%;transform:translateX(-50%);display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:8px;z-index:5;width:max-content;max-width:380px}
 .mini-chip{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-full);padding:6px 14px;font-size:.72rem;font-weight:600;color:var(--navy);box-shadow:var(--shadow-sm);white-space:nowrap;display:inline-flex;align-items:center;gap:5px}
-.roles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.roles-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:20px}
 .role-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-md);padding:24px;transition:all .2s;cursor:default;display:flex;flex-direction:column;gap:10px}
 .role-card:hover{border-color:var(--blue);box-shadow:var(--shadow-md);transform:translateY(-2px)}
 .role-icon{width:40px;height:40px;border-radius:10px;background:var(--blue-light);display:flex;align-items:center;justify-content:center}
@@ -111,41 +110,44 @@ nav a:hover{color:var(--navy);background:var(--surface)}
 .timeline-desc{font-size:.85rem;color:var(--slate);line-height:1.6}
 .timeline-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
 .t-tag{font-size:.72rem;font-weight:600;color:var(--slate);background:var(--surface);border:1px solid var(--border);padding:2px 10px;border-radius:var(--radius-full)}
-.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.project-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-md);padding:24px;display:flex;flex-direction:column;gap:10px;transition:all .2s}
+.help-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.help-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-md);padding:32px 30px;display:flex;flex-direction:column;gap:14px;transition:all .25s;position:relative;overflow:hidden}
+.help-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--blue);opacity:0;transition:opacity .25s}
+.help-card:hover{border-color:var(--blue);box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.help-card:hover::before{opacity:1}
+.help-num{font-size:.78rem;font-weight:700;letter-spacing:.18em;color:var(--blue);font-family:'Inter',sans-serif}
+.help-title{font-size:1.18rem;font-weight:800;color:var(--navy);letter-spacing:-.01em;line-height:1.3}
+.help-desc{font-size:.93rem;color:var(--slate);line-height:1.68}
+.primary-projects{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.project-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px;transition:all .2s}
 .project-card:hover{border-color:var(--blue);box-shadow:var(--shadow-md);transform:translateY(-2px)}
-.project-card.flagship{grid-column:span 2;background:linear-gradient(135deg,var(--navy) 0%,#1E3A5F 100%);border-color:var(--navy);color:#fff;min-height:280px}
-.project-card.clinical{border:1.5px solid #6366F1;background:linear-gradient(180deg,#fff 0%,#F5F3FF 100%)}
 .project-eyebrow{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);display:inline-flex;align-items:center;gap:6px}
-.project-card.flagship .project-eyebrow{color:#60A5FA}
-.project-card.clinical .project-eyebrow{color:#6366F1}
-.project-title{font-size:1.1rem;font-weight:700;color:var(--navy)}
-.project-card.flagship .project-title{color:#fff;font-size:1.5rem}
-.project-desc{font-size:.82rem;color:var(--slate);line-height:1.55}
-.project-card.flagship .project-desc{color:rgba(255,255,255,.78);font-size:.9rem}
+.project-title{font-size:1.2rem;font-weight:700;color:var(--navy)}
+.project-desc{font-size:.86rem;color:var(--slate);line-height:1.6}
 .project-stack{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
 .stack-tag{font-size:.7rem;font-weight:600;background:var(--blue-light);color:var(--blue);padding:2px 8px;border-radius:var(--radius-full)}
-.project-card.flagship .stack-tag{background:rgba(255,255,255,.12);color:rgba(255,255,255,.85)}
-.project-card.clinical .stack-tag{background:#EDE9FE;color:#6366F1}
-.project-link{display:inline-flex;align-items:center;gap:4px;font-size:.82rem;font-weight:700;color:var(--blue);margin-top:auto;transition:gap .15s}
+.project-link{display:inline-flex;align-items:center;gap:4px;font-size:.82rem;font-weight:700;color:var(--blue);margin-top:auto;transition:gap .15s;padding-top:8px}
 .project-link:hover{gap:8px}
-.project-card.flagship .project-link{color:#93C5FD}
-.project-card.clinical .project-link{color:#6366F1}
-.project-features{margin-top:4px;padding-top:10px;border-top:1px solid var(--border);display:flex;flex-wrap:wrap;gap:5px 14px;font-size:.72rem;color:var(--slate)}
-.project-card.flagship .project-features{border-top-color:rgba(255,255,255,.12);color:rgba(255,255,255,.55)}
-.project-card.clinical .project-features{border-top-color:#E0E7FF}
-.project-features span::before{content:"✓ ";color:var(--blue);font-weight:700;margin-right:2px}
-.project-card.flagship .project-features span::before{color:#60A5FA}
-.project-card.clinical .project-features span::before{color:#6366F1}
+.secondary-projects-divider{margin:36px 0 16px;display:flex;align-items:center;gap:14px}
+.secondary-projects-divider .label{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--slate);white-space:nowrap}
+.secondary-projects-divider .line{flex:1;height:1px;background:var(--border)}
+.secondary-projects{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.secondary-tile{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-sm);padding:20px 22px;display:flex;flex-direction:column;gap:8px;transition:all .15s}
+.secondary-tile:hover{border-color:var(--blue);box-shadow:var(--shadow-sm)}
+.secondary-tile-title{font-size:1rem;font-weight:700;color:var(--navy);display:flex;align-items:center;gap:8px}
+.secondary-tile-title .tag{font-size:.6rem;font-weight:700;color:var(--slate);background:var(--surface);padding:2px 8px;border-radius:var(--radius-full);letter-spacing:.06em;text-transform:uppercase}
+.secondary-tile-desc{font-size:.8rem;color:var(--slate);line-height:1.55}
+.secondary-tile-link{font-size:.74rem;color:var(--blue);font-weight:600;margin-top:4px;display:inline-flex;align-items:center;gap:3px;transition:gap .15s}
+.secondary-tile-link:hover{gap:6px}
 .resume-cta-section{background:linear-gradient(135deg,var(--navy) 0%,#162444 100%);padding:80px 0;text-align:center}
 .resume-cta-section h2{font-size:2.2rem;font-weight:800;color:#fff;margin-bottom:12px;letter-spacing:-.02em}
-.resume-cta-section p{font-size:1rem;color:rgba(255,255,255,.65);margin-bottom:36px;max-width:480px;margin-inline:auto}
+.resume-cta-section p{font-size:1rem;color:rgba(255,255,255,.65);margin-bottom:36px;max-width:520px;margin-inline:auto;line-height:1.6}
 .resume-cta-btns{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap}
 .btn-white{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:var(--radius-full);background:#fff;color:var(--navy);font-size:1rem;font-weight:700;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
 .btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2)}
 .btn-outline-white{display:inline-flex;align-items:center;gap:8px;padding:13px 28px;border-radius:var(--radius-full);background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.3);font-size:1rem;font-weight:600;cursor:pointer;transition:all .2s;text-decoration:none}
 .btn-outline-white:hover{border-color:rgba(255,255,255,.7);background:rgba(255,255,255,.08)}
-.format-note{font-size:.78rem;color:rgba(255,255,255,.4);margin-top:16px}
+.format-note{font-size:.78rem;color:rgba(255,255,255,.4);margin-top:18px}
 .contact-inner{display:grid;grid-template-columns:1fr 1.5fr;gap:72px;align-items:start}
 .contact-info-title{font-size:1.6rem;font-weight:800;color:var(--navy);margin-bottom:12px}
 .contact-info-sub{font-size:.95rem;color:var(--slate);line-height:1.7;margin-bottom:32px}
@@ -155,37 +157,45 @@ nav a:hover{color:var(--navy);background:var(--surface)}
 .contact-detail-text{font-size:.88rem}
 .contact-detail-label{font-size:.72rem;color:var(--slate);font-weight:600;text-transform:uppercase;letter-spacing:.06em}
 .contact-detail-val{font-weight:600;color:var(--navy)}
-.social-row{display:flex;gap:10px;margin-top:28px}
+.social-row{display:flex;gap:10px;margin-top:28px;flex-wrap:wrap}
 .social-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:var(--radius-full);font-size:.82rem;font-weight:600;color:var(--navy);border:1.5px solid var(--border);background:var(--white);cursor:pointer;transition:all .2s}
 .social-btn:hover{border-color:var(--blue);color:var(--blue)}
 .contact-form{display:flex;flex-direction:column;gap:16px}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .form-group{display:flex;flex-direction:column;gap:5px}
 .form-label{font-size:.8rem;font-weight:600;color:var(--navy)}
-.form-input,.form-textarea{width:100%;padding:11px 15px;border:1.5px solid var(--border);border-radius:var(--radius-sm);font-family:inherit;font-size:.88rem;color:var(--navy);background:var(--white);outline:none;transition:border-color .15s}
+.form-input,.form-textarea,.form-select{width:100%;padding:11px 15px;border:1.5px solid var(--border);border-radius:var(--radius-sm);font-family:inherit;font-size:.88rem;color:var(--navy);background:var(--white);outline:none;transition:border-color .15s}
 .form-input::placeholder,.form-textarea::placeholder{color:var(--slate-light)}
-.form-input:focus,.form-textarea:focus{border-color:var(--blue)}
+.form-input:focus,.form-textarea:focus,.form-select:focus{border-color:var(--blue)}
 .form-textarea{resize:vertical;min-height:120px;line-height:1.6}
+.form-select{cursor:pointer;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%2364748B' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px}
 .form-submit{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 32px;border-radius:var(--radius-full);background:var(--navy);color:#fff;font-family:inherit;font-size:.95rem;font-weight:700;border:none;cursor:pointer;transition:all .2s;align-self:flex-start}
 .form-submit:hover{background:var(--navy-mid);transform:translateY(-1px);box-shadow:var(--shadow-md)}
 footer{background:var(--navy);padding:36px 0;display:flex;align-items:center}
 .footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
 .footer-logo{font-size:1rem;font-weight:800;color:#fff;letter-spacing:-.02em}
 .footer-logo span{color:#60A5FA}
-.footer-links{display:flex;gap:20px}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap}
 .footer-links a{font-size:.82rem;color:rgba(255,255,255,.5);font-weight:500;transition:color .15s}
 .footer-links a:hover{color:#fff}
 .footer-copy{font-size:.78rem;color:rgba(255,255,255,.3)}
-@media(max-width:900px){.hero-inner{grid-template-columns:1fr;gap:40px}.hero-photo-col{order:-1}.hero-photo-wrap{width:240px;height:270px}.hero h1{font-size:2.2rem}.roles-grid{grid-template-columns:1fr 1fr}.snapshot-inner{grid-template-columns:1fr}.achieve-grid{grid-template-columns:1fr 1fr}.projects-grid{grid-template-columns:1fr 1fr}.project-card.flagship{grid-column:span 2}.contact-inner{grid-template-columns:1fr}.section-title{font-size:1.6rem}.hero-chips{max-width:280px}}
-@media(max-width:600px){.header-inner{gap:12px}nav{display:none}.roles-grid{grid-template-columns:1fr}.achieve-grid{grid-template-columns:1fr}.projects-grid{grid-template-columns:1fr}.project-card.flagship{grid-column:span 1}.form-row{grid-template-columns:1fr}.hero-stats{flex-wrap:wrap;gap:20px}section{padding:64px 0}}
+@media(max-width:900px){.hero-inner{grid-template-columns:1fr;gap:40px}.hero-photo-col{order:-1}.hero-photo-wrap{width:240px;height:270px}.hero h1{font-size:2.2rem}.snapshot-inner{grid-template-columns:1fr}.achieve-grid{grid-template-columns:1fr 1fr}.primary-projects{grid-template-columns:1fr 1fr}.secondary-projects{grid-template-columns:1fr 1fr}.contact-inner{grid-template-columns:1fr}.section-title{font-size:1.6rem}.hero-chips{max-width:280px}.help-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.header-inner{gap:12px}nav{display:none}.achieve-grid{grid-template-columns:1fr}.primary-projects{grid-template-columns:1fr}.secondary-projects{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.hero-stats{flex-wrap:wrap;gap:20px}section{padding:64px 0}}
 </style>
 </head>
 <body>
-<div class="mockup-notice">🎨 UI Mockup v2.5 — Resume Wired In + 7 Live AI Products<span>Recruiter-First Personal Brand Site</span></div>
 <header>
   <div class="container"><div class="header-inner">
-    <div class="logo">Pankaj<span>.ai</span></div>
-    <nav><a href="#roles">Roles</a><a href="#experience">Experience</a><a href="#strengths">Expertise</a><a href="#projects">Projects</a><a href="/resume.html" target="_blank">Resume</a><a href="#contact">Contact</a></nav>
+    <a href="#about" class="logo">Pankaj<span>.ai</span></a>
+    <nav>
+      <a href="#roles">Roles</a>
+      <a href="#experience">Experience</a>
+      <a href="#strengths">Expertise</a>
+      <a href="#how-i-help">Approach</a>
+      <a href="#projects">Portfolio</a>
+      <a href="/resume.html" target="_blank">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
     <div class="header-ctas">
       <a href="#contact" class="btn btn-ghost">Contact</a>
       <a href="/resume.html" target="_blank" class="btn btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download Resume</a>
@@ -196,7 +206,7 @@ footer{background:var(--navy);padding:36px 0;display:flex;align-items:center}
   <div class="hero-text">
     <div class="hero-eyebrow">Open to Leadership Opportunities</div>
     <h1>AI Strategy Leader<br/>& <em>Technology</em><br/>Executive</h1>
-    <p class="hero-sub"><strong>20+ years leading enterprise technology</strong> at JPMorgan Chase, Discover, Northern Trust, and Citi — now combining AI strategy, delivery leadership, and hands-on product building to help organizations scale what's next.</p>
+    <p class="hero-sub"><strong>20+ years leading enterprise technology, program, product, and transformation initiatives</strong> across major financial institutions — now combining AI strategy, delivery leadership, and hands-on product building to help organizations <strong>reduce cost, scale adoption, and turn AI into measurable business outcomes</strong>.</p>
     <div class="hero-ctas">
       <a href="/resume.html" target="_blank" class="btn btn-primary btn-lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download Resume</a>
       <a href="#contact" class="btn btn-ghost btn-lg">Contact Me</a>
@@ -206,7 +216,7 @@ footer{background:var(--navy);padding:36px 0;display:flex;align-items:center}
       <div class="stat-item"><div class="stat-num">20+</div><div class="stat-label">Years Leadership</div></div>
       <div class="stat-item"><div class="stat-num">$40M+</div><div class="stat-label">Portfolio Led</div></div>
       <div class="stat-item"><div class="stat-num">200+</div><div class="stat-label">Stakeholders Aligned</div></div>
-      <div class="stat-item"><div class="stat-num">7</div><div class="stat-label">AI Products Live</div></div>
+      <div class="stat-item"><div class="stat-num">6+</div><div class="stat-label">AI Products Built</div></div>
     </div>
   </div>
   <div class="hero-photo-col"><div class="hero-photo-wrap">
@@ -219,22 +229,23 @@ footer{background:var(--navy);padding:36px 0;display:flex;align-items:center}
   </div></div>
 </div></div></section>
 <section id="roles"><div class="container">
-  <div class="section-header"><div class="section-label">Best-Fit Roles</div><div class="section-title">Roles I'm Built For</div><div class="section-sub">Enterprise leadership meets AI-native execution — I operate across the full spectrum of technology leadership.</div></div>
+  <div class="section-header"><div class="section-label">Best-Fit Leadership Roles</div><div class="section-title">Best-Fit Leadership Roles</div><div class="section-sub">Enterprise leadership meets AI-native execution — I operate across the full spectrum of senior technology and product leadership.</div></div>
   <div class="roles-grid">
     <div class="role-card"><div class="role-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></div><div class="role-title">AI Director / AI Strategy Leader</div><div class="role-desc">Build and govern enterprise AI strategy — from roadmap to responsible adoption at scale.</div></div>
+    <div class="role-card"><div class="role-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div><div class="role-title">VP, Technology / Transformation / Delivery</div><div class="role-desc">Set direction, govern portfolios, and lead organizations through lasting transformation and AI adoption.</div></div>
     <div class="role-card"><div class="role-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><div class="role-title">Senior Program Manager</div><div class="role-desc">Orchestrate multi-workstream transformations with governance, budgets, and executive reporting.</div></div>
     <div class="role-card"><div class="role-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div class="role-title">Senior Project Manager</div><div class="role-desc">Drive complex delivery with precision — on schedule, in scope, and aligned to business outcomes.</div></div>
-    <div class="role-card"><div class="role-icon"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div><div class="role-title">Product Owner / Product Manager</div><div class="role-desc">Translate business vision into backlog reality — bridging strategy, design, and engineering.</div></div>
+    <div class="role-card"><div class="role-icon"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div><div class="role-title">Product Director</div><div class="role-desc">Lead product strategy, roadmap prioritization, AI-enabled product transformation, and cross-functional execution from vision to measurable adoption.</div></div>
+    <div class="role-card"><div class="role-icon"><svg viewBox="0 0 24 24"><path d="M20 7L12 3 4 7v10l8 4 8-4V7z"/><path d="M12 11v10M4 7l8 4 8-4"/></svg></div><div class="role-title">Product Owner / Product Manager</div><div class="role-desc">Translate business vision into backlog reality — bridging strategy, design, and engineering.</div></div>
     <div class="role-card"><div class="role-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div class="role-title">IT Manager / IT Director</div><div class="role-desc">Lead technology teams and delivery functions with operational rigor and strategic foresight.</div></div>
-    <div class="role-card"><div class="role-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div><div class="role-title">VP, Technology / Transformation</div><div class="role-desc">Set direction, govern portfolios, and lead organizations through lasting transformation.</div></div>
   </div>
 </div></section>
-<section id="snapshot"><div class="container"><div class="snapshot-inner">
+<section id="snapshot" class="alt-bg"><div class="container"><div class="snapshot-inner">
   <div class="snapshot-text">
     <div class="section-label">Executive Summary</div><div class="section-title">Career Snapshot</div>
     <p>Senior technology executive with <strong>20+ years of proven enterprise leadership</strong> — governing complex programs, driving AI strategy, and delivering transformation at scale across major financial institutions.</p>
     <p>Deep experience spanning <strong>program &amp; portfolio management, agile transformation, product strategy, governance, and AI enablement</strong> — with a track record of bridging business, technology, and execution.</p>
-    <p>Now uniquely positioned at the intersection of <strong>enterprise leadership and AI-native building</strong> — having shipped 7 production AI products spanning clinical, dance education, AI automation, and multi-tenant SaaS domains.</p>
+    <p>Now uniquely positioned at the intersection of <strong>enterprise leadership and AI-native building</strong> — having built and deployed <strong>6+ AI-native products</strong> spanning clinical, dance education, AI automation, and multi-tenant SaaS domains.</p>
     <div style="margin-top:20px"><div style="font-size:.78rem;font-weight:700;color:var(--slate);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px">Prior Employers</div><div class="company-row"><div class="company-pill">JPMorgan Chase</div><div class="company-pill">Discover Financial</div><div class="company-pill">Northern Trust</div><div class="company-pill">Citi</div><div class="company-pill">CNA Insurance</div><div class="company-pill">Allstate</div></div></div>
   </div>
   <div class="snapshot-callout">
@@ -244,7 +255,7 @@ footer{background:var(--navy);padding:36px 0;display:flex;align-items:center}
     <div class="callout-divider"></div>
     <div class="callout-stat"><div class="callout-num">40+</div><div class="callout-label">Global Resources Led</div></div>
     <div class="callout-divider"></div>
-    <div class="callout-stat"><div class="callout-num">7</div><div class="callout-label">AI Products Shipped to Production</div></div>
+    <div class="callout-stat"><div class="callout-num">6+</div><div class="callout-label">AI-Native Products Built &amp; Deployed</div></div>
   </div>
 </div></div></section>
 <section id="strengths"><div class="container">
@@ -272,100 +283,106 @@ footer{background:var(--navy);padding:36px 0;display:flex;align-items:center}
     <div class="strength-chip">Scrum / SAFe / Kanban</div>
   </div>
 </div></section>
-<section id="achievements"><div class="container">
+<section id="achievements" class="alt-bg"><div class="container">
   <div class="section-header"><div class="section-label">By the Numbers</div><div class="section-title">Key Achievements</div></div>
   <div class="achieve-grid">
     <div class="achieve-card dark"><div class="achieve-num">20+</div><div class="achieve-label">Years of Leadership Experience</div><div class="achieve-desc">Enterprise technology leadership across financial services, insurance, and public sector.</div></div>
     <div class="achieve-card"><div class="achieve-num">$40M+</div><div class="achieve-label">Portfolio Leadership</div><div class="achieve-desc">Governed multi-million dollar technology portfolios at CNA, JPMorgan, and Discover.</div></div>
     <div class="achieve-card"><div class="achieve-num">200+</div><div class="achieve-label">Stakeholders Trained &amp; Aligned</div><div class="achieve-desc">Delivered Agile training and transformation workshops globally at JPMorgan Chase.</div></div>
     <div class="achieve-card"><div class="achieve-num">40+</div><div class="achieve-label">Global Resources Led</div><div class="achieve-desc">Directed globally distributed technology and business teams at Northern Trust.</div></div>
-    <div class="achieve-card dark"><div class="achieve-num">7</div><div class="achieve-label">AI Products Live in Production</div><div class="achieve-desc">Including clinical AI, multi-agent platform, SMS bot platform, and SaaS products.</div></div>
+    <div class="achieve-card dark"><div class="achieve-num">6+</div><div class="achieve-label">AI-Native Products Built &amp; Deployed</div><div class="achieve-desc">Including AI bot platforms, AI career platforms, education SaaS, and personal AI systems.</div></div>
     <div class="achieve-card"><div class="achieve-num">11</div><div class="achieve-label">Active GitHub Repositories</div><div class="achieve-desc">Building in public — React, TypeScript, Node.js, Claude API, MCP Protocol.</div></div>
   </div>
 </div></section>
 <section id="experience"><div class="container">
   <div class="section-header"><div class="section-label">Career History</div><div class="section-title">Experience</div><div class="section-sub">20+ years governing technology transformation at scale — in institutions where failure is not an option.</div></div>
   <div class="timeline">
-    <div class="timeline-item current"><div class="timeline-dot"></div><div class="timeline-header"><div class="timeline-co">VedaLogic</div><div class="timeline-date">Feb 2026 – Present</div></div><div class="timeline-role">Founder &amp; AI Product Builder · Technology Strategist · Naperville, IL</div><div class="timeline-desc">Founder of VedaLogic — AI automation consulting and product studio. Shipped 7 production AI-native products spanning clinical, education, and enterprise SaaS domains. Architected multi-agent delivery systems using model tiering and MCP-based extensibility.</div><div class="timeline-tags"><span class="t-tag">Multi-agent AI</span><span class="t-tag">MCP Protocol</span><span class="t-tag">Claude API</span><span class="t-tag">React / TypeScript</span><span class="t-tag">Founder</span></div></div>
-    <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-header"><div class="timeline-co">Discover Financial Services</div><div class="timeline-date">Jun 2019 – May 2022</div></div><div class="timeline-role">Manager, Program Management · Chicago, IL</div><div class="timeline-desc">Built CIO-level dashboards for real-time program health visibility. Led cloud modernization governance across 40+ engineering teams.</div><div class="timeline-tags"><span class="t-tag">Portfolio Governance</span><span class="t-tag">Agile Coaching</span><span class="t-tag">Cloud Modernization</span><span class="t-tag">Team Leadership</span></div></div>
-    <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-header"><div class="timeline-co">CitiBank</div><div class="timeline-date">Aug 2018 – May 2019</div></div><div class="timeline-role">Agile Project Manager · Portfolio &amp; Delivery Lead · Elk Grove Village, IL</div><div class="timeline-desc">Led portfolio intake for global retail banking technology. Transitioned global teams from waterfall to Lean Agile.</div><div class="timeline-tags"><span class="t-tag">Global Delivery</span><span class="t-tag">Agile Transformation</span><span class="t-tag">Stakeholder Management</span></div></div>
+    <div class="timeline-item current"><div class="timeline-dot"></div><div class="timeline-header"><div class="timeline-co">VedaLogic</div><div class="timeline-date">Feb 2026 – Present</div></div><div class="timeline-role">Founder &amp; AI Product Builder · Technology Strategist · Naperville, IL</div><div class="timeline-desc">Founded VedaLogic as an AI automation consulting practice and product studio. Built and deployed 6+ AI-native products spanning bot orchestration, AI career platforms, education SaaS, and conversational AI systems. Architected multi-agent delivery using model tiering and MCP-based extensibility.</div><div class="timeline-tags"><span class="t-tag">Multi-agent AI</span><span class="t-tag">MCP Protocol</span><span class="t-tag">Claude API</span><span class="t-tag">React / TypeScript</span><span class="t-tag">Founder</span></div></div>
+    <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-header"><div class="timeline-co">Discover Financial Services</div><div class="timeline-date">Jun 2019 – May 2022</div></div><div class="timeline-role">Manager, Program Management · Chicago, IL</div><div class="timeline-desc">Built CIO-level dashboards for real-time program health visibility. Led cloud modernization governance across 40+ engineering teams. Coached and managed a team of Agile Program Managers and Scrum Masters.</div><div class="timeline-tags"><span class="t-tag">Portfolio Governance</span><span class="t-tag">Cloud Modernization</span><span class="t-tag">Team Leadership</span></div></div>
+    <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-header"><div class="timeline-co">CitiBank</div><div class="timeline-date">Aug 2018 – May 2019</div></div><div class="timeline-role">Agile Project Manager · Portfolio &amp; Delivery Lead · Elk Grove Village, IL</div><div class="timeline-desc">Led portfolio intake for global retail banking technology. Transitioned global teams from waterfall to Lean Agile.</div><div class="timeline-tags"><span class="t-tag">Global Delivery</span><span class="t-tag">Agile Transformation</span></div></div>
     <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-header"><div class="timeline-co">Northern Trust</div><div class="timeline-date">Jun 2017 – Jun 2018</div></div><div class="timeline-role">Senior Scrum Master · Agile Project Manager · Chicago, IL</div><div class="timeline-desc">Directed Agile delivery for trading platform modernization spanning 40+ global resources. Implemented CI/CD pipelines and Agile engineering practices.</div><div class="timeline-tags"><span class="t-tag">Trading Platforms</span><span class="t-tag">CI/CD</span><span class="t-tag">40+ Resources</span></div></div>
-    <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-header"><div class="timeline-co">CNA Insurance</div><div class="timeline-date">May 2016 – May 2017</div></div><div class="timeline-role">Scrum Master · Chicago, IL</div><div class="timeline-desc">Supported Agile adoption across enterprise initiatives within a $40M technology portfolio. Coordinated release planning for database upgrades impacting 200+ applications.</div><div class="timeline-tags"><span class="t-tag">$40M Portfolio</span><span class="t-tag">Agile Coaching</span><span class="t-tag">200+ Apps</span></div></div>
-    <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-header"><div class="timeline-co">JPMorgan Chase</div><div class="timeline-date">Jun 2011 – Feb 2016</div></div><div class="timeline-role">Senior Technology Project Manager (AVP) · Scrum Master · Chicago, IL</div><div class="timeline-desc">Managed $7M+ Treasury technology portfolio. Delivered Agile transformation training to 200+ global stakeholders. Owned program governance, budget tracking, and C-suite reporting.</div><div class="timeline-tags"><span class="t-tag">$7M+ Portfolio</span><span class="t-tag">200+ Stakeholders</span><span class="t-tag">Treasury Tech</span><span class="t-tag">C-Suite Reporting</span></div></div>
-    <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-header"><div class="timeline-co">Allstate · State Farm · CCMSI · IDES</div><div class="timeline-date">Pre-2011</div></div><div class="timeline-role">Progressive Program &amp; Portfolio Leadership</div><div class="timeline-desc">Progressive program and portfolio leadership across application modernization, ERP delivery (SAP, PeopleSoft), and enterprise technology transformation.</div><div class="timeline-tags"><span class="t-tag">ERP Delivery</span><span class="t-tag">App Modernization</span><span class="t-tag">Financial Services</span><span class="t-tag">Insurance</span></div></div>
+    <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-header"><div class="timeline-co">CNA Insurance</div><div class="timeline-date">May 2016 – May 2017</div></div><div class="timeline-role">Scrum Master · Chicago, IL</div><div class="timeline-desc">Supported Agile adoption across enterprise initiatives within a $40M technology portfolio. Coordinated release planning for database upgrades impacting 200+ applications.</div><div class="timeline-tags"><span class="t-tag">$40M Portfolio</span><span class="t-tag">Agile Coaching</span></div></div>
+    <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-header"><div class="timeline-co">JPMorgan Chase</div><div class="timeline-date">Jun 2011 – Feb 2016</div></div><div class="timeline-role">Senior Technology Project Manager (AVP) · Scrum Master · Chicago, IL</div><div class="timeline-desc">Managed $7M+ Treasury technology portfolio. Delivered Agile transformation training to 200+ global stakeholders. Owned program governance, budget tracking, and C-suite reporting.</div><div class="timeline-tags"><span class="t-tag">$7M+ Portfolio</span><span class="t-tag">200+ Stakeholders</span><span class="t-tag">C-Suite Reporting</span></div></div>
+    <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-header"><div class="timeline-co">Allstate · State Farm · CCMSI · IDES</div><div class="timeline-date">Pre-2011</div></div><div class="timeline-role">Progressive Program &amp; Portfolio Leadership</div><div class="timeline-desc">Progressive program and portfolio leadership across application modernization, ERP delivery (SAP, PeopleSoft), and enterprise technology transformation.</div><div class="timeline-tags"><span class="t-tag">ERP Delivery</span><span class="t-tag">Financial Services</span><span class="t-tag">Insurance</span></div></div>
+  </div>
+</div></section>
+<section id="how-i-help" class="alt-bg"><div class="container">
+  <div class="section-header"><div class="section-label">Executive Value</div><div class="section-title">How I Help Companies Scale AI</div><div class="section-sub">I help organizations move from AI interest to measurable business outcomes by combining strategy, governance, product thinking, and delivery execution.</div></div>
+  <div class="help-grid">
+    <div class="help-card">
+      <div class="help-num">01 · STRATEGY</div>
+      <div class="help-title">Prioritize High-Value AI Use Cases</div>
+      <div class="help-desc">Identify where AI can reduce cost, improve speed, eliminate manual work, or create better customer and employee experiences.</div>
+    </div>
+    <div class="help-card">
+      <div class="help-num">02 · GOVERNANCE</div>
+      <div class="help-title">Build Governance Without Slowing Delivery</div>
+      <div class="help-desc">Create intake models, decision frameworks, risk alignment, and executive visibility so AI can scale responsibly.</div>
+    </div>
+    <div class="help-card">
+      <div class="help-num">03 · EXECUTION</div>
+      <div class="help-title">Turn Strategy Into Execution</div>
+      <div class="help-desc">Translate AI vision into roadmaps, pilots, products, adoption plans, and measurable outcomes.</div>
+    </div>
+    <div class="help-card">
+      <div class="help-num">04 · DELIVERY</div>
+      <div class="help-title">Reduce Delivery Waste</div>
+      <div class="help-desc">Improve team alignment, backlog clarity, program governance, decision flow, and delivery accountability.</div>
+    </div>
   </div>
 </div></section>
 <section id="projects"><div class="container">
-  <div class="section-header"><div class="section-label">AI Builder Portfolio</div><div class="section-title">Live AI Products</div><div class="section-sub">7 production AI-native products spanning clinical decision support, multi-tenant SaaS, multi-agent platforms, and consulting practice. All deployed and accessible.</div></div>
-  <div class="projects-grid">
-    <div class="project-card flagship">
-      <div class="project-eyebrow">⭐ Flagship · Multi-Agent Platform</div>
-      <div class="project-title">AI SmartApp Factory</div>
-      <div class="project-desc">Intelligent platform for collaborative AI-assisted software creation. Multi-agent ceremony pipeline — GPT as Product Owner, Claude as Architect, Claude Code as Builder. Intent-driven development with automated build &amp; deployment, workspace isolation, and structured feature lifecycle management.</div>
-      <div class="project-stack"><span class="stack-tag">TypeScript</span><span class="stack-tag">Multi-agent</span><span class="stack-tag">Claude API</span><span class="stack-tag">GPT-4</span><span class="stack-tag">Playwright</span><span class="stack-tag">PostgreSQL</span><span class="stack-tag">Drizzle ORM</span></div>
-      <div class="project-features"><span>Workspace Mgmt</span><span>Intent-Driven Dev</span><span>9-Step Ceremony Pipeline</span><span>Auto Build &amp; Deploy</span><span>Soft-Delete Safety</span></div>
-      <a href="https://aismartappfactory-production.up.railway.app" target="_blank" class="project-link">View Live →</a>
-    </div>
-    <div class="project-card clinical">
-      <div class="project-eyebrow">🏥 Clinical AI · Healthcare</div>
-      <div class="project-title">NeoAssist</div>
-      <div class="project-desc">Clinical decision support for neonatal resuscitation. Real-time state machine, checklist engine, and "Aria" AI suggestion layer with strict human-review safety guards — never auto-administers, never auto-escalates.</div>
-      <div class="project-stack"><span class="stack-tag">TypeScript</span><span class="stack-tag">React</span><span class="stack-tag">State Machine</span></div>
-      <div class="project-features"><span>Safety-First AI</span><span>Offline Queue</span><span>Birth-Anchored Reminders</span></div>
-      <a href="https://neoassist-production.up.railway.app" target="_blank" class="project-link">View Live →</a>
-    </div>
-    <div class="project-card">
-      <div class="project-eyebrow">🩰 SaaS · Education</div>
-      <div class="project-title">DanceRise</div>
-      <div class="project-desc">All-in-one platform for competitive dance studios. Dancer management, progress tracking with visual analytics, AI dance coaching, competition planning across 24+ companies, and career portal for college/professional opportunities.</div>
-      <div class="project-stack"><span class="stack-tag">React 18</span><span class="stack-tag">TypeScript</span><span class="stack-tag">Express</span><span class="stack-tag">PostgreSQL</span><span class="stack-tag">OpenAI</span></div>
-      <div class="project-features"><span>AI Coach</span><span>Multi-Tenant</span><span>Stripe Billing</span><span>Push Notifications</span></div>
-      <a href="https://dancerisedemo.up.railway.app" target="_blank" class="project-link">View Live →</a>
-    </div>
+  <div class="section-header"><div class="section-label">AI Builder Portfolio</div><div class="section-title">AI Builder Portfolio</div><div class="section-sub">Selected AI-native products and platforms built to demonstrate practical AI strategy, automation, product execution, and modern delivery.</div></div>
+  <div class="primary-projects">
     <div class="project-card">
       <div class="project-eyebrow">🤖 Multi-Tenant Platform</div>
       <div class="project-title">VedaBots Manager</div>
-      <div class="project-desc">Multi-tenant AI SMS bot platform. Plug in any local business → get an after-hours AI that answers customer questions and captures leads. Powered by Claude Haiku for cost efficiency at scale.</div>
-      <div class="project-stack"><span class="stack-tag">Node.js</span><span class="stack-tag">Claude Haiku</span><span class="stack-tag">Twilio</span><span class="stack-tag">Neon Postgres</span></div>
-      <div class="project-features"><span>Multi-Tenant</span><span>SMS Webhooks</span><span>Lead Capture</span><span>VIM = First Customer</span></div>
+      <div class="project-desc">AI bot orchestration and lead capture platform for businesses. Multi-tenant SMS bot system powered by Claude Haiku and Twilio — plug in any local business and get an after-hours AI that answers questions and captures leads.</div>
+      <div class="project-stack"><span class="stack-tag">Node.js</span><span class="stack-tag">Claude Haiku</span><span class="stack-tag">Twilio</span></div>
       <a href="https://vedabots-manager-production.up.railway.app" target="_blank" class="project-link">View Live →</a>
     </div>
     <div class="project-card">
       <div class="project-eyebrow">💼 AI Career Platform</div>
       <div class="project-title">JobSurf</div>
-      <div class="project-desc">AI-assisted job execution platform. Paste any job URL → fit scoring against your profile → AI-tailored resume → pipeline tracking. Built as both founder and primary user — dogfooded daily.</div>
-      <div class="project-stack"><span class="stack-tag">React</span><span class="stack-tag">TypeScript</span><span class="stack-tag">Node.js</span><span class="stack-tag">Neon</span></div>
-      <div class="project-features"><span>URL Parser</span><span>AI Fit Scoring</span><span>Resume Tailoring</span></div>
+      <div class="project-desc">AI-assisted job search and opportunity execution platform. Paste any job URL → AI fit scoring → resume tailoring → pipeline tracking. Built as both founder and primary user — dogfooded daily.</div>
+      <div class="project-stack"><span class="stack-tag">React</span><span class="stack-tag">TypeScript</span><span class="stack-tag">Claude</span></div>
       <a href="https://jobsurf-production.up.railway.app" target="_blank" class="project-link">View Live →</a>
     </div>
     <div class="project-card">
-      <div class="project-eyebrow">🎨 Client Project</div>
-      <div class="project-title">VIM Dance Studio</div>
-      <div class="project-desc">Premium website for Virtues In Motion Dance Studio (Yorkville, IL). Built on the Stitch "Ethereal Stage" design system. First real VedaBots Manager customer — paired website + AI SMS bot deployment.</div>
-      <div class="project-stack"><span class="stack-tag">HTML / CSS</span><span class="stack-tag">Neon Postgres</span><span class="stack-tag">Railway</span></div>
-      <div class="project-features"><span>Premium Design</span><span>VedaBots Integrated</span></div>
-      <a href="https://vim-production.up.railway.app" target="_blank" class="project-link">View Live →</a>
+      <div class="project-eyebrow">🩰 Education SaaS</div>
+      <div class="project-title">DanceRise</div>
+      <div class="project-desc">Multi-role AI-enabled dance education and studio operating platform. Dancer management, AI dance coaching, progress analytics, competition planning, career portal, Stripe billing.</div>
+      <div class="project-stack"><span class="stack-tag">React 18</span><span class="stack-tag">OpenAI</span><span class="stack-tag">PostgreSQL</span></div>
+      <a href="https://dancerisedemo.up.railway.app" target="_blank" class="project-link">View Live →</a>
     </div>
-    <div class="project-card">
-      <div class="project-eyebrow">🏢 Studio &amp; Consulting</div>
-      <div class="project-title">VedaLogic</div>
-      <div class="project-desc">AI Automation Consulting for operations-heavy businesses — landscaping, home services, professional services. Practical AI systems that reduce manual work, respond to leads faster, and scale without adding headcount. The studio behind all the products on this page.</div>
-      <div class="project-stack"><span class="stack-tag">React</span><span class="stack-tag">JavaScript</span><span class="stack-tag">Consulting</span></div>
-      <div class="project-features"><span>AI Strategy</span><span>Workflow Automation</span><span>Lead Response</span></div>
-      <a href="https://vedalogic.ai" target="_blank" class="project-link">View Site →</a>
+  </div>
+  <div class="secondary-projects-divider"><div class="label">Also Built</div><div class="line"></div></div>
+  <div class="secondary-projects">
+    <div class="secondary-tile">
+      <div class="secondary-tile-title">VedaSurf <span class="tag">Personal AI</span></div>
+      <div class="secondary-tile-desc">Conversational AI surface for family and household coordination — voice-first interaction model bridging services, schools, and daily life through ambient intelligence.</div>
+    </div>
+    <div class="secondary-tile">
+      <div class="secondary-tile-title">VedaForge <span class="tag">Platform</span></div>
+      <div class="secondary-tile-desc">AI product development and orchestration platform — multi-agent ceremony pipeline with structured delivery rigor, quality gates, and automated build / deploy workflows.</div>
+    </div>
+    <div class="secondary-tile">
+      <div class="secondary-tile-title">VedaLogic <span class="tag">Studio</span></div>
+      <div class="secondary-tile-desc">AI automation consulting for operations-heavy businesses. Practical AI systems that reduce manual work and scale lead response without adding headcount.</div>
+      <a href="https://vedalogic.ai" target="_blank" class="secondary-tile-link">View Site →</a>
     </div>
   </div>
 </div></section>
 <section class="resume-cta-section" id="resume"><div class="container">
   <h2>Download My Resume</h2>
-  <p>Recruiter-ready format. Available for AI Director, Program Manager, Product, and VP-level roles.</p>
+  <p>Recruiter-ready resume available in PDF format. Available for AI Director, Senior Program Manager, Product Director, IT Director, and VP-level roles.</p>
   <div class="resume-cta-btns">
-    <a href="/resume.html" target="_blank" class="btn-white"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>View / Download Resume</a>
+    <a href="/resume.html" target="_blank" class="btn-white"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download Resume</a>
     <a href="https://www.linkedin.com/in/ppandey-ai-nativeleader" target="_blank" class="btn-outline-white"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>View LinkedIn</a>
   </div>
   <div class="format-note">Web view + one-click "Save as PDF" · Recruiter-shareable URL</div>
 </div></section>
-<section id="contact"><div class="container"><div class="contact-inner">
+<section id="contact" class="alt-bg"><div class="container"><div class="contact-inner">
   <div>
     <div class="section-label">Get in Touch</div>
     <div class="contact-info-title">Let's Talk</div>
@@ -376,12 +393,29 @@ footer{background:var(--navy);padding:36px 0;display:flex;align-items:center}
     <div class="social-row"><a href="https://www.linkedin.com/in/ppandey-ai-nativeleader" target="_blank" class="social-btn">LinkedIn</a><a href="https://github.com/pandeydumka" target="_blank" class="social-btn">GitHub</a><a href="/resume.html" target="_blank" class="social-btn">Resume</a></div>
   </div>
   <div class="contact-form">
-    <div class="form-row"><div class="form-group"><label class="form-label">Name</label><input class="form-input" type="text" placeholder="Your full name"/></div><div class="form-group"><label class="form-label">Email</label><input class="form-input" type="email" placeholder="your@email.com"/></div></div>
-    <div class="form-row"><div class="form-group"><label class="form-label">Company</label><input class="form-input" type="text" placeholder="Your company"/></div><div class="form-group"><label class="form-label">Role / Opportunity</label><input class="form-input" type="text" placeholder="e.g. AI Director, Program Manager"/></div></div>
+    <div class="form-row">
+      <div class="form-group"><label class="form-label">Name</label><input class="form-input" type="text" placeholder="Your full name"/></div>
+      <div class="form-group"><label class="form-label">Email</label><input class="form-input" type="email" placeholder="your@email.com"/></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label class="form-label">Company</label><input class="form-input" type="text" placeholder="Your company"/></div>
+      <div class="form-group">
+        <label class="form-label">Opportunity Type</label>
+        <select class="form-select">
+          <option value="">Select opportunity type...</option>
+          <option value="full-time">Full-time</option>
+          <option value="contract">Contract</option>
+          <option value="consulting">Consulting</option>
+          <option value="fractional">Fractional</option>
+          <option value="speaking">Speaking / Advisory</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group"><label class="form-label">Role / Position</label><input class="form-input" type="text" placeholder="e.g. AI Director, VP Technology, Senior Program Manager"/></div>
     <div class="form-group"><label class="form-label">Message</label><textarea class="form-textarea" placeholder="Tell me about the opportunity or how I can help..."></textarea></div>
     <button class="form-submit">Send Message <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button>
   </div>
 </div></div></section>
-<footer><div class="container"><div class="footer-inner"><div class="footer-logo">Pankaj<span>.ai</span></div><div class="footer-links"><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="/resume.html" target="_blank">Resume</a><a href="#contact">Contact</a></div><div class="footer-copy">© 2026 Pankaj Pandey · Chicago, IL</div></div></div></footer>
+<footer><div class="container"><div class="footer-inner"><div class="footer-logo">Pankaj<span>.ai</span></div><div class="footer-links"><a href="#about">About</a><a href="#experience">Experience</a><a href="#how-i-help">Approach</a><a href="#projects">Portfolio</a><a href="/resume.html" target="_blank">Resume</a><a href="#contact">Contact</a></div><div class="footer-copy">© 2026 Pankaj Pandey · Chicago, IL</div></div></div></footer>
 </body>
 </html>
